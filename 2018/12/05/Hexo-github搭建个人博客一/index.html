@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
 <meta property="og:description" content="Hexo+github搭建个人博客一直想搭建个人博客来着，本来想用Python，Django在自己的服务器上自己搭建，忽然想起来，以前好像见过同学用过Hexo框架搭建个人博客，所以我就先用Hexo搭建看看。因为网上的教程或多或少有时候都有点参差不齐，自己也是看得脑壳疼，所以下面我简单把我这两天搭建出现的问题和方法，写成博客，就当自己练手吧。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://lightfisher.github.io/img/hexo1/1.jpg">
+<meta property="og:image" content="http://yoursite.com/img/hexo1/1.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/2.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/3.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/4.jpg">
@@ -37,11 +37,11 @@
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/20.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/21.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/22.jpg">
-<meta property="og:updated_time" content="2018-12-06T03:45:05.596Z">
+<meta property="og:updated_time" content="2018-12-06T10:50:53.285Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+github搭建个人博客一">
 <meta name="twitter:description" content="Hexo+github搭建个人博客一直想搭建个人博客来着，本来想用Python，Django在自己的服务器上自己搭建，忽然想起来，以前好像见过同学用过Hexo框架搭建个人博客，所以我就先用Hexo搭建看看。因为网上的教程或多或少有时候都有点参差不齐，自己也是看得脑壳疼，所以下面我简单把我这两天搭建出现的问题和方法，写成博客，就当自己练手吧。">
-<meta name="twitter:image" content="https://lightfisher.github.io/img/hexo1/1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/img/hexo1/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -247,7 +247,7 @@
       
         <h1 id="Hexo-github搭建个人博客"><a href="#Hexo-github搭建个人博客" class="headerlink" title="Hexo+github搭建个人博客"></a>Hexo+github搭建个人博客</h1><pre><code>一直想搭建个人博客来着，本来想用Python，Django在自己的服务器上自己搭建，忽然想起来，以前好像见过同学用过Hexo框架搭建个人博客，所以我就先用Hexo搭建看看。因为网上的教程或多或少有时候都有点参差不齐，自己也是看得脑壳疼，所以下面我简单把我这两天搭建出现的问题和方法，写成博客，就当自己练手吧。
 </code></pre><a id="more"></a>
-<h5 id="1-环境的搭建-node-js-git的安装"><a href="#1-环境的搭建-node-js-git的安装" class="headerlink" title="1.环境的搭建 node.js  git的安装"></a>1.环境的搭建 node.js  git的安装</h5><p>这些依赖环境的安装，相信网上别的CSDN博客都有，也肯定写得比我好，我就不献丑了-.-,下面是我觉得写的蛮好的<br><br><br>NodeJS的安装<a href="https://blog.csdn.net/muzidigbig/article/details/80493880" target="_blank" rel="noopener">教程</a><br><br><br>Git 的安装<a href="https://blog.csdn.net/it_hfzj/article/details/80693965" target="_blank" rel="noopener">教程</a><br><br><br><img src="https://lightfisher.github.io/img/hexo1/1.jpg" alt="nodejs"></p>
+<h5 id="1-环境的搭建-node-js-git的安装"><a href="#1-环境的搭建-node-js-git的安装" class="headerlink" title="1.环境的搭建 node.js  git的安装"></a>1.环境的搭建 node.js  git的安装</h5><p>这些依赖环境的安装，相信网上别的CSDN博客都有，也肯定写得比我好，我就不献丑了-.-,下面是我觉得写的蛮好的<br><br><br>NodeJS的安装<a href="https://blog.csdn.net/muzidigbig/article/details/80493880" target="_blank" rel="noopener">教程</a><br><br><br>Git 的安装<a href="https://blog.csdn.net/it_hfzj/article/details/80693965" target="_blank" rel="noopener">教程</a><br><br><br><img src="/img/hexo1/1.jpg" alt="nodejs"></p>
 <p><img src="https://lightfisher.github.io/img/hexo1/2.jpg" alt="git"><br><br>以上是nodejs和git的安装成功截图</p>
 <h5 id="2-github的注册"><a href="#2-github的注册" class="headerlink" title="2.github的注册"></a>2.github的注册</h5><pre><code>emmm，相信这些那么应该都有了吧，我就不进行这些无聊的操作了，我就讲一下注册完后的操作吧。注册完后，你得创建一个存储库，名字就是你 username.github.io (username是你注册的名字)
 </code></pre><p><img src="https://lightfisher.github.io/img/hexo1/3.jpg" alt="emm"></p>
@@ -340,6 +340,11 @@
                 <span class="tooltip-inner">
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/1.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
                     
                     
                   </div>
