@@ -6,42 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo+github搭建个人博客一 | Lightfish&#39;s Blog</title>
+  <title>Python入门问题二 | Lightfish&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo+github搭建个人博客一直想搭建个人博客来着，本来想用Python，Django在自己的服务器上自己搭建，忽然想起来，以前好像见过同学用过Hexo框架搭建个人博客，所以我就先用Hexo搭建看看。因为网上的教程或多或少有时候都有点参差不齐，自己也是看得脑壳疼，所以下面我简单把我这两天搭建出现的问题和方法，写成博客，就当自己练手吧。">
-<meta name="keywords" content="hexo搭建">
+  <meta name="description" content="Python入门问题二1.简述Django的ORMORM，全拼Object-Relation Mapping，意为对象-关系映射 实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite...，如">
+<meta name="keywords" content="Python,Python基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo+github搭建个人博客一">
-<meta property="og:url" content="http://yoursite.com/2018/12/05/Hexo-github搭建个人博客一/index.html">
+<meta property="og:title" content="Python入门问题二">
+<meta property="og:url" content="http://yoursite.com/2018/12/06/Python入门问题二/index.html">
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
-<meta property="og:description" content="Hexo+github搭建个人博客一直想搭建个人博客来着，本来想用Python，Django在自己的服务器上自己搭建，忽然想起来，以前好像见过同学用过Hexo框架搭建个人博客，所以我就先用Hexo搭建看看。因为网上的教程或多或少有时候都有点参差不齐，自己也是看得脑壳疼，所以下面我简单把我这两天搭建出现的问题和方法，写成博客，就当自己练手吧。">
+<meta property="og:description" content="Python入门问题二1.简述Django的ORMORM，全拼Object-Relation Mapping，意为对象-关系映射 实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite...，如">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/1.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/2.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/3.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/4.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/5.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/6.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/7.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/8.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/9.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/10.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/11.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/12.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/13.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/14.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/15.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/16.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/17.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/18.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/20.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/21.jpg">
-<meta property="og:image" content="https://lightfisher.com.io/img/hexo1/22.jpg">
-<meta property="og:updated_time" content="2018-12-05T17:18:33.135Z">
+<meta property="og:image" content="https://lightfisher.github.io/img/Python_question/26.jpg">
+<meta property="og:image" content="https://lightfisher.github.io/img/Python_question/27.jpg">
+<meta property="og:image" content="https://lightfisher.github.io/img/Python_question/28.jpg">
+<meta property="og:updated_time" content="2018-12-05T17:07:54.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo+github搭建个人博客一">
-<meta name="twitter:description" content="Hexo+github搭建个人博客一直想搭建个人博客来着，本来想用Python，Django在自己的服务器上自己搭建，忽然想起来，以前好像见过同学用过Hexo框架搭建个人博客，所以我就先用Hexo搭建看看。因为网上的教程或多或少有时候都有点参差不齐，自己也是看得脑壳疼，所以下面我简单把我这两天搭建出现的问题和方法，写成博客，就当自己练手吧。">
-<meta name="twitter:image" content="https://lightfisher.com.io/img/hexo1/1.jpg">
+<meta name="twitter:title" content="Python入门问题二">
+<meta name="twitter:description" content="Python入门问题二1.简述Django的ORMORM，全拼Object-Relation Mapping，意为对象-关系映射 实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite...，如">
+<meta name="twitter:image" content="https://lightfisher.github.io/img/Python_question/26.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -196,14 +178,14 @@
           <div id="js-content" class="content-ll">
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<article id="post-Hexo-github搭建个人博客一" class="article article-type-post " itemscope="" itemprop="blogPost">
+<article id="post-Python入门问题二" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo+github搭建个人博客一
+      Python入门问题二
     </h1>
   
 
@@ -214,7 +196,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">972字</span>
+        <span class="post-count">617字</span>
       </span>
     </span>
 
@@ -223,7 +205,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -231,94 +213,49 @@
         <!-- 设置浏览 -->
         <br><span style="color: rgb(196, 197, 253); font-size: 14px;">文章总共浏览了: <span id="busuanzi_value_page_pv"></span>次</span>
         
-        <a href="/2018/12/05/Hexo-github搭建个人博客一/" class="archive-article-date">
-  	<time datetime="2018-12-05T13:33:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
+        <a href="/2018/12/06/Python入门问题二/" class="archive-article-date">
+  	<time datetime="2018-12-05T16:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hexo-github搭建个人博客"><a href="#Hexo-github搭建个人博客" class="headerlink" title="Hexo+github搭建个人博客"></a>Hexo+github搭建个人博客</h1><pre><code>一直想搭建个人博客来着，本来想用Python，Django在自己的服务器上自己搭建，忽然想起来，以前好像见过同学用过Hexo框架搭建个人博客，所以我就先用Hexo搭建看看。因为网上的教程或多或少有时候都有点参差不齐，自己也是看得脑壳疼，所以下面我简单把我这两天搭建出现的问题和方法，写成博客，就当自己练手吧。
+        <h1 id="Python入门问题二"><a href="#Python入门问题二" class="headerlink" title="Python入门问题二"></a>Python入门问题二</h1><h3 id="1-简述Django的ORM"><a href="#1-简述Django的ORM" class="headerlink" title="1.简述Django的ORM"></a>1.简述Django的ORM</h3><pre><code>ORM，全拼Object-Relation Mapping，意为对象-关系映射
+实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite...，如果数据库迁移，只需要更换Django的数据库引擎就好了
 </code></pre><a id="more"></a>
-<h5 id="1-环境的搭建-node-js-git的安装"><a href="#1-环境的搭建-node-js-git的安装" class="headerlink" title="1.环境的搭建 node.js  git的安装"></a>1.环境的搭建 node.js  git的安装</h5><p>这些依赖环境的安装，相信网上别的CSDN博客都有，也肯定写得比我好，我就不献丑了-.-,下面是我觉得写的蛮好的<br><br><br>NodeJS的安装<a href="https://blog.csdn.net/muzidigbig/article/details/80493880" target="_blank" rel="noopener">教程</a><br><br><br>Git 的安装<a href="https://blog.csdn.net/it_hfzj/article/details/80693965" target="_blank" rel="noopener">教程</a><br><br><br><img src="https://lightfisher.com.io/img/hexo1/1.jpg" alt="nodejs"></p>
-<p><img src="https://lightfisher.com.io/img/hexo1/2.jpg" alt="git"><br><br>以上是nodejs和git的安装成功截图</p>
-<h5 id="2-github的注册"><a href="#2-github的注册" class="headerlink" title="2.github的注册"></a>2.github的注册</h5><pre><code>emmm，相信这些那么应该都有了吧，我就不进行这些无聊的操作了，我就讲一下注册完后的操作吧。注册完后，你得创建一个存储库，名字就是你 username.github.io (username是你注册的名字)
-</code></pre><p><img src="https://lightfisher.com.io/img/hexo1/3.jpg" alt="emm"></p>
-<p>如上</p>
-<h5 id="3-Hexo的安装"><a href="#3-Hexo的安装" class="headerlink" title="3.Hexo的安装"></a>3.Hexo的安装</h5><ul>
-<li>1.首先你要先进入git bash界面(应该桌面右键就有了，如果没有，你进入到开始菜单那里找到git，下面就有了)进入后的界面如下</li>
-</ul>
-<p><img src="https://lightfisher.com.io/img/hexo1/4.jpg" alt="git bash"></p>
+<h3 id="2-一行代码展开二维列表"><a href="#2-一行代码展开二维列表" class="headerlink" title="2.一行代码展开二维列表"></a>2.一行代码展开二维列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">a = [[np.random.randint(1,10),np.random.randint(1,10)] for _ in range(3)]</span><br><span class="line">print(a)</span><br><span class="line">x = [j for i in a for j in i]</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
+<p><img src="https://lightfisher.github.io/img/Python_question/26.jpg" alt="img"></p>
 <ul>
-<li>然后全局配置设置到淘宝源<br></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p><img src="https://lightfisher.com.io/img/hexo1/5.jpg" alt="registry"></p>
-<ul>
-<li>全局设置 user.email 和user.name<br></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;your_emaill&quot;</span><br><span class="line">git config --global user.name &quot;your_name&quot;</span><br></pre></td></tr></table></figure>
-<p>这里的<code>your_email</code>和<code>your_name</code>就是你注册github的邮箱和用户名，截图如下：<br></p>
-<p><img src="https://lightfisher.com.io/img/hexo1/6.jpg" alt="git config"></p>
-<ul>
-<li>生成ssh密钥</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh </span><br><span class="line">ssh-keygen -t rsa -C “your_email” #打自己的邮箱</span><br></pre></td></tr></table></figure>
-<p><img src="https://lightfisher.com.io/img/hexo1/7.jpg" alt="ssh-key"></p>
-<ul>
-<li>设置ssh key到GitHub 默认生成ssh key在C:\Users\username.ssh文件夹中，复制 id_rsa.pub文件到 github-&gt;settings-&gt;SSH and GPG key-&gt;new ssh key 如图 </li>
-</ul>
-<p><img src="https://lightfisher.com.io/img/hexo1/8.jpg" alt="img"></p>
-<p><img src="https://lightfisher.com.io/img/hexo1/9.jpg" alt="setting"></p>
-<p><img src="https://lightfisher.com.io/img/hexo1/10.jpg" alt="img"></p>
-<p><img src="https://lightfisher.com.io/img/hexo1/11.jpg" alt="img"></p>
-<p><img src="https://lightfisher.com.io/img/hexo1/12.jpg" alt="img"></p>
-<ul>
-<li>检查ssh设置是否成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<li>将列表装换成numpy矩阵，通过numpy的flatten()方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">a = [[np.random.randint(1,10),np.random.randint(1,10)] for _ in range(3)]</span><br><span class="line">print(np.array(a).flatten().tolist())</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><img src="https://lightfisher.com.io/img/hexo1/13.jpg" alt="check ssh"></p>
-<h5 id="4-安装hexo插件"><a href="#4-安装hexo插件" class="headerlink" title="4.安装hexo插件"></a>4.安装hexo插件</h5><ul>
-<li>输入以下代码</li>
+<p><img src="https://lightfisher.github.io/img/Python_question/27.jpg" alt="img"></p>
+<h3 id="3-举例说明异常模块中try，except，else，finally的相关意义"><a href="#3-举例说明异常模块中try，except，else，finally的相关意义" class="headerlink" title="3.举例说明异常模块中try，except，else，finally的相关意义"></a>3.举例说明异常模块中try，except，else，finally的相关意义</h3><ul>
+<li>try…except…else 没有获取异常，执行else语句</li>
+<li>try…except…finally 不管有没有获取异常都会执行finally语句</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd / #进入根目录，实际上就是git安装的根目录</span><br><span class="line">pwd /</span><br><span class="line">npm install hexo-cli -g #安装hexo</span><br></pre></td></tr></table></figure>
-<p><img src="https://lightfisher.com.io/img/hexo1/14.jpg" alt="install hexo"></p>
-<ul>
-<li>安装以后呢，你可以输入以下代码</li>
+<h3 id="4-举例说明zip函数的用法"><a href="#4-举例说明zip函数的用法" class="headerlink" title="4.举例说明zip函数的用法"></a>4.举例说明zip函数的用法</h3><ul>
+<li>zip()函数在运算的时候，会以一个或多个序列(可迭代对象)作为参数，返回一个元组的列表。同时将这些序列中并排的元素配对</li>
+<li>zip()参数可以接受任何类型的序列，同时还可以有两个以上的参数；当传入参数不等时，zip能够自动以最短序列长度为准进行截取，并获得元组</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">hexo init Hexo #我认为就是创建了一个他的项目框架</span><br><span class="line">cd Hexo #进入你创建的那个目录</span><br><span class="line">npm install</span><br><span class="line">hexo generate #(可简写成 hexo g)</span><br><span class="line">hexo server #(可简写成 hexo s)</span><br></pre></td></tr></table></figure>
-<p>由于我懒得重新创了，我就用网上别人的截图，下面我会注明</p>
-<p><img src="https://lightfisher.com.io/img/hexo1/15.jpg" alt="img"></p>
-<p><img src="https://lightfisher.com.io/img/hexo1/16.jpg" alt="img"></p>
-<p><img src="https://lightfisher.com.io/img/hexo1/17.jpg" alt="img"></p>
-<p>emmm，上面我之所以我输入hexo s -p 4005，相信聪明的人已经看出来了，因为默认4000被占用了，所以输入-p+端口号，后面这个-d相当于debug模式，基本不用管</p>
-<ul>
-<li>到现在为止你已经完成了hexo的基本配置，你可以输入下面那个本地网址进行查看 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>,相信你一定是下面这张图，如果不是打电话联系，咳，开玩笑，如果真的出错，emmmm，下次我开个评论 TAT</li>
+<p><img src="https://lightfisher.github.io/img/Python_question/28.jpg" alt="zip"></p>
+<h3 id="5-列出常见的状态吗和意义"><a href="#5-列出常见的状态吗和意义" class="headerlink" title="5.列出常见的状态吗和意义"></a>5.列出常见的状态吗和意义</h3><ul>
+<li><code>200</code> <code>OK</code> 请求正常处理完毕</li>
+<li><code>204</code> <code>No Content</code> 请求成功处理，没有实体的主体返回</li>
+<li><code>206</code> <code>Partial Content</code> GET范围请求已成功处理</li>
+<li><code>301</code> <code>Moved Permanently</code> 永久重定向，资源已永久分配新URL</li>
+<li><code>302</code> <code>Found</code> 临时重定向，资源已临时分配新URL</li>
+<li><code>303</code> <code>See Other</code> 临时重定向，期望使用GET定向获取</li>
+<li><code>304</code> <code>Not Modified</code> 发送的附带条件不足请求为满足</li>
+<li><code>307</code> <code>Temporary Redirect</code> 临时重定向，POST不会变成GET</li>
+<li><code>400</code> <code>Bad Request</code> 请求报文错误或参数不足</li>
+<li><code>401</code> <code>Unauthorized</code> 需要通过HTTP认证，或认证失败</li>
+<li><code>403</code> <code>Forbidden</code> 请求资源被拒绝</li>
+<li><code>404</code> <code>Not Found</code> 无法找到请求资源(服务器无法拒绝)</li>
+<li><code>500</code> <code>Internal Server Error</code> 服务器故障或Web应用故障</li>
+<li><code>503</code> <code>Service Unavailable</code> 服务器超负载或停机维修</li>
 </ul>
-<p><img src="https://lightfisher.com.io/img/hexo1/18.jpg" alt="img"></p>
-<h5 id="5-上传到自己的github"><a href="#5-上传到自己的github" class="headerlink" title="5.上传到自己的github"></a>5.上传到自己的github</h5><ul>
-<li>首先安装部署到github插件依赖</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install –save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p><img src="https://lightfisher.com.io/img/hexo1/20.jpg" alt="img"></p>
-<ul>
-<li>打开你创建的项目下的配置文件(如果你跟着我做的话，应该是Hexo)</li>
-</ul>
-<p><img src="https://lightfisher.com.io/img/hexo1/21.jpg" alt="img"></p>
-<ul>
-<li>然后修改其中的配置</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:lightfisher/lightfisher.github.io.git  #改成自己的用户名和用户名加域名</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<ul>
-<li>然后在部署到你的github<br></li>
-</ul>
-<p><code>hexo deploy</code>可以简写成<code>hexo d</code>,代码我就不贴了</p>
-<ul>
-<li>这是最关键的，你可以登上自己的网址<code>your_name.github.io</code>,your_name是你的github用户名。你可能要等个十几分钟，才可以看见,下面是我自己的博客</li>
-</ul>
-<p><img src="https://lightfisher.com.io/img/hexo1/22.jpg" alt="finish"></p>
-<p><br><br><br><br>以上就是hexo+github的基本搭建，有空我会写，其他的配置，如,主题的配置，头像的设置，标签和分类的设置引用，第三发插件的设置等。<br><br>So，Just have fun…</p>
 
       
 
@@ -353,7 +290,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo搭建</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
         		</li>
       		
 		</ul>
@@ -365,7 +306,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -420,7 +361,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/05/Hexo-github搭建个人博客一/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/06/Python入门问题二/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -434,18 +375,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/05/Hexo-github搭建个人博客二/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo+github搭建个人博客二
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/04/Python入门问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python入门问题</div>
+    <a href="/2018/12/05/Hexo-github搭建个人博客二/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo+github搭建个人博客二</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -472,7 +404,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-github搭建个人博客"><span class="toc-number">1.</span> <span class="toc-text">Hexo+github搭建个人博客</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-环境的搭建-node-js-git的安装"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">1.环境的搭建 node.js  git的安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-github的注册"><span class="toc-number">1.0.0.0.2.</span> <span class="toc-text">2.github的注册</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Hexo的安装"><span class="toc-number">1.0.0.0.3.</span> <span class="toc-text">3.Hexo的安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-安装hexo插件"><span class="toc-number">1.0.0.0.4.</span> <span class="toc-text">4.安装hexo插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-上传到自己的github"><span class="toc-number">1.0.0.0.5.</span> <span class="toc-text">5.上传到自己的github</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python入门问题二"><span class="toc-number">1.</span> <span class="toc-text">Python入门问题二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-简述Django的ORM"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.简述Django的ORM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-一行代码展开二维列表"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.一行代码展开二维列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-举例说明异常模块中try，except，else，finally的相关意义"><span class="toc-number">1.0.3.</span> <span class="toc-text">3.举例说明异常模块中try，except，else，finally的相关意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-举例说明zip函数的用法"><span class="toc-number">1.0.4.</span> <span class="toc-text">4.举例说明zip函数的用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-列出常见的状态吗和意义"><span class="toc-number">1.0.5.</span> <span class="toc-text">5.列出常见的状态吗和意义</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
