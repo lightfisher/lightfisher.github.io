@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Python入门问题二 | Lightfish&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python入门问题二1.简述Django的ORMORM，全拼Object-Relation Mapping，意为对象-关系映射 实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite...，如">
+  <meta name="description" content="Python入门问题二1.简述Django的ORM ORM，全拼Object-Relation Mapping，意为对象-关系映射实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite…，如果数">
 <meta name="keywords" content="Python,Python基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python入门问题二">
 <meta property="og:url" content="http://yoursite.com/2018/12/06/Python入门问题二/index.html">
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
-<meta property="og:description" content="Python入门问题二1.简述Django的ORMORM，全拼Object-Relation Mapping，意为对象-关系映射 实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite...，如">
+<meta property="og:description" content="Python入门问题二1.简述Django的ORM ORM，全拼Object-Relation Mapping，意为对象-关系映射实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite…，如果数">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://lightfisher.github.io/img/Python_question/26.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/Python_question/27.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/Python_question/28.jpg">
-<meta property="og:updated_time" content="2018-12-06T04:26:39.636Z">
+<meta property="og:updated_time" content="2018-12-06T12:51:35.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python入门问题二">
-<meta name="twitter:description" content="Python入门问题二1.简述Django的ORMORM，全拼Object-Relation Mapping，意为对象-关系映射 实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite...，如">
+<meta name="twitter:description" content="Python入门问题二1.简述Django的ORM ORM，全拼Object-Relation Mapping，意为对象-关系映射实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite…，如果数">
 <meta name="twitter:image" content="https://lightfisher.github.io/img/Python_question/26.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
@@ -41,6 +41,7 @@
 
   
 
+  
 </head>
 </html>
 <body>
@@ -202,7 +203,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">617字</span>
+        <span class="post-count">618字</span>
       </span>
     </span>
 
@@ -227,13 +228,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Python入门问题二"><a href="#Python入门问题二" class="headerlink" title="Python入门问题二"></a>Python入门问题二</h1><h3 id="1-简述Django的ORM"><a href="#1-简述Django的ORM" class="headerlink" title="1.简述Django的ORM"></a>1.简述Django的ORM</h3><pre><code>ORM，全拼Object-Relation Mapping，意为对象-关系映射
-实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite...，如果数据库迁移，只需要更换Django的数据库引擎就好了
-</code></pre><a id="more"></a>
-<h3 id="2-一行代码展开二维列表"><a href="#2-一行代码展开二维列表" class="headerlink" title="2.一行代码展开二维列表"></a>2.一行代码展开二维列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">a = [[np.random.randint(1,10),np.random.randint(1,10)] for _ in range(3)]</span><br><span class="line">print(a)</span><br><span class="line">x = [j for i in a for j in i]</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
+        <h1 id="Python入门问题二"><a href="#Python入门问题二" class="headerlink" title="Python入门问题二"></a>Python入门问题二</h1><h3 id="1-简述Django的ORM"><a href="#1-简述Django的ORM" class="headerlink" title="1.简述Django的ORM"></a>1.简述Django的ORM</h3><blockquote>
+<p>ORM，全拼Object-Relation Mapping，意为对象-关系映射实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite…，如果数据库迁移，只需要更换Django的数据库引擎就好了</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="2-一行代码展开二维列表"><a href="#2-一行代码展开二维列表" class="headerlink" title="2.一行代码展开二维列表"></a>2.一行代码展开二维列表</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"><span class="selector-tag">a</span> = [[np<span class="selector-class">.random</span><span class="selector-class">.randint</span>(<span class="number">1</span>,<span class="number">10</span>),np<span class="selector-class">.random</span><span class="selector-class">.randint</span>(<span class="number">1</span>,<span class="number">10</span>)] <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">3</span>)]</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(a)</span></span></span><br><span class="line">x = [j <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> <span class="selector-tag">a</span> <span class="keyword">for</span> j <span class="keyword">in</span> i]</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(x)</span></span></span><br></pre></td></tr></table></figure>
 <p><img src="https://lightfisher.github.io/img/Python_question/26.jpg" alt="img"></p>
 <ul>
-<li>将列表装换成numpy矩阵，通过numpy的flatten()方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">a = [[np.random.randint(1,10),np.random.randint(1,10)] for _ in range(3)]</span><br><span class="line">print(np.array(a).flatten().tolist())</span><br></pre></td></tr></table></figure>
+<li>将列表装换成numpy矩阵，通过numpy的flatten()方法<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import numpy as <span class="built_in">np</span></span><br><span class="line">a = [[<span class="built_in">np</span>.<span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">10</span>),<span class="built_in">np</span>.<span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">10</span>)] <span class="keyword">for</span> <span class="symbol">_</span> <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">np</span>.<span class="built_in">array</span>(a).<span class="built_in">flatten</span>().tolist())</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><img src="https://lightfisher.github.io/img/Python_question/27.jpg" alt="img"></p>
@@ -475,7 +477,6 @@
     } 
 setInterval("createtime()",250);
 </script>
-
 
 
 <!-- 页面点击小红心 -->
