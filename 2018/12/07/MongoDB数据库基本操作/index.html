@@ -6,17 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>文章分类 | Lightfish&#39;s Blog</title>
+  <title>MongoDB数据库基本操作 | Lightfish&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Python,爬虫,Django,html5,程序猿,Student,Coder,前端,Hexo,Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="MongoDB的操作1.连接MongoDB Python 想要连接MongoDB需要安装pymongo，emm，安装方法可以在cmd下，pip安装(pip install pymongo)安装完了后你就可以用一下代码连接MongoDB">
+<meta name="keywords" content="Python,MongoDB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB数据库基本操作">
+<meta property="og:url" content="http://yoursite.com/2018/12/07/MongoDB数据库基本操作/index.html">
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
+<meta property="og:description" content="MongoDB的操作1.连接MongoDB Python 想要连接MongoDB需要安装pymongo，emm，安装方法可以在cmd下，pip安装(pip install pymongo)安装完了后你就可以用一下代码连接MongoDB">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-04T12:39:36.930Z">
+<meta property="og:image" content="http://yoursite.com/img/mongodb/8.jpg">
+<meta property="og:image" content="http://yoursite.com/img/mongodb/9.jpg">
+<meta property="og:image" content="http://yoursite.com/img/mongodb/10.jpg">
+<meta property="og:image" content="http://yoursite.com/img/mongodb/11.jpg">
+<meta property="og:image" content="http://yoursite.com/img/mongodb/12.jpg">
+<meta property="og:updated_time" content="2018-12-07T10:01:47.716Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章分类">
+<meta name="twitter:title" content="MongoDB数据库基本操作">
+<meta name="twitter:description" content="MongoDB的操作1.连接MongoDB Python 想要连接MongoDB需要安装pymongo，emm，安装方法可以在cmd下，pip安装(pip install pymongo)安装完了后你就可以用一下代码连接MongoDB">
+<meta name="twitter:image" content="http://yoursite.com/img/mongodb/8.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -178,14 +187,14 @@
           <div id="js-content" class="content-ll">
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<article id="page-" class="article article-type-page " itemscope="" itemprop="blogPost">
+<article id="post-MongoDB数据库基本操作" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      文章分类
+      MongoDB数据库基本操作
     </h1>
   
 
@@ -196,7 +205,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">973字</span>
       </span>
     </span>
 
@@ -205,7 +214,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
@@ -213,15 +222,124 @@
         <!-- 设置浏览 -->
         <br><span style="color: rgb(196, 197, 253); font-size: 14px;">文章总共浏览了: <span id="busuanzi_value_page_pv"></span>次</span>
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2018-12-04T12:35:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-04</time>
+        <a href="/2018/12/07/MongoDB数据库基本操作/" class="archive-article-date">
+  	<time datetime="2018-12-07T09:11:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="MongoDB的操作"><a href="#MongoDB的操作" class="headerlink" title="MongoDB的操作"></a>MongoDB的操作</h1><h4 id="1-连接MongoDB"><a href="#1-连接MongoDB" class="headerlink" title="1.连接MongoDB"></a>1.连接MongoDB</h4><blockquote>
+<p>Python 想要连接MongoDB需要安装pymongo，emm，安装方法可以在cmd下，pip安装(<code>pip install pymongo</code>)<br>安装完了后你就可以用一下代码连接MongoDB</p>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import pymongo</span><br><span class="line"><span class="keyword">client</span> = pymongo.MongoClient(host=<span class="string">'localhost'</span>,port=<span class="string">'27017'</span>) <span class="meta">#默认端口27017</span></span><br><span class="line">db = <span class="keyword">client</span>[<span class="string">'mydb'</span>] <span class="meta">#指定mydb这个数据库，如果没有会自动创建</span></span><br><span class="line">collection = db[<span class="string">'students'</span>]  <span class="meta">#指定students这个集合，如果没有会自动创建一个</span></span><br></pre></td></tr></table></figure>
+<p><img src="/img/mongodb/8.jpg" alt="img"></p>
+<h4 id="2-MongoDB数据库，数据的插入"><a href="#2-MongoDB数据库，数据的插入" class="headerlink" title="2.MongoDB数据库，数据的插入"></a>2.MongoDB数据库，数据的插入</h4><blockquote>
+<p>插入数据，注意是已字典的形式。比如插入以下数据</p>
+</blockquote>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">student=&#123;</span><br><span class="line">  <span class="string">'id'</span>:<span class="number">20180101</span>,</span><br><span class="line">  <span class="string">'name'</span>:<span class="string">'Jack'</span>,</span><br><span class="line">  <span class="string">'age'</span>:<span class="number">18</span>,</span><br><span class="line">  <span class="string">'gender'</span>:<span class="string">'male'</span></span><br><span class="line">&#125;</span><br><span class="line">用 collection.<span class="keyword">insert</span>(student)</span><br></pre></td></tr></table></figure>
+<p>如下图<br><img src="/img/mongodb/9.jpg" alt="img"></p>
+<blockquote>
+<p>最新官方推荐<code>insert_one()</code>插入一条数据，返回的不同，是InsertOneResult对象<br>在MongoDB中都有一个_id属性来唯一标识，如果没有就会自动产生一个ObjectId类型的_id属性，返回_id值<br>当然也可以一次性插入多条数据  最新官方推荐 <code>insert_many()</code>来插入多条数据,或者依旧用<code>insert</code>,<code>collection.insert([student1,student2])</code>,注意是列表形式。</p>
+</blockquote>
+<h4 id="3-MongoDB数据库的查询"><a href="#3-MongoDB数据库的查询" class="headerlink" title="3.MongoDB数据库的查询"></a>3.MongoDB数据库的查询</h4><blockquote>
+<p>我们可以用<code>find_one()</code>或者<code>find()</code>方法来进行查询，find()返回一个生成器对象<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">result</span> = collection.find_one(&#123;<span class="string">'name'</span>:<span class="string">'Mike'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>返回的是<code>字典类型</code>  查询不存在时，则会返回<code>none</code> 记住哦： 是字典类型<br>比如你想查询age等于20的若干数据，你会用什么呢<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">results = collection.<span class="built_in">find</span>(&#123;<span class="string">'age'</span>:<span class="number">20</span>&#125;)</span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">  <span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>查询大于20呢<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">results = collection.<span class="built_in">find</span>(&#123;<span class="string">'age'</span>:&#123;<span class="string">'$gt'</span>: <span class="number">20</span>&#125;&#125;)</span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">  <span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>这里查询的条件键值已经不是单纯的数字，而是一个字典，比较符号<code>$gt</code> 大于<br>下面是这些比较符号的总结</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含 义</th>
+<th>实 例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$gt</td>
+<td>大于</td>
+<td>{‘age’:{‘$gt’:20}}</td>
+</tr>
+<tr>
+<td>$lt</td>
+<td>小于</td>
+<td>{‘age’:{‘$lt’:20}}</td>
+</tr>
+<tr>
+<td>$gte</td>
+<td>&gt;=</td>
+<td>{‘age’:{‘$gte’:20}}</td>
+</tr>
+<tr>
+<td>$lte</td>
+<td>&lt;=</td>
+<td>{‘age’:{‘$lte’:20}}</td>
+</tr>
+<tr>
+<td>$ne</td>
+<td>!=</td>
+<td>{‘age’:{‘$ne’:20}}</td>
+</tr>
+<tr>
+<td>$in</td>
+<td>在范围内</td>
+<td>{‘age’:{‘$in’:[20,23]}}</td>
+</tr>
+<tr>
+<td>$nin</td>
+<td>不在范围内</td>
+<td>{‘age’:{‘$nin’:[20,23]}}</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>还支持正则表达式，如查询以’M’开头名字的数据</p>
+</blockquote>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">results</span> = collection.find(&#123;<span class="string">'name'</span>:&#123;<span class="string">'$regex'</span>:<span class="string">'^M.*'</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>还有简单的功能符号</p>
+</blockquote>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$exists   属性是否存在    &#123;<span class="string">'name'</span>:&#123;<span class="string">'$exists'</span>:True&#125;&#125;   name属性存在</span><br><span class="line">$where    高级条件查询    &#123;<span class="string">'$where'</span>:<span class="string">'obj.fans_counts == obj.follows_counts'</span>&#125;   自身粉丝数等于关注数</span><br></pre></td></tr></table></figure>
+<h4 id="4-计数"><a href="#4-计数" class="headerlink" title="4.计数"></a>4.计数</h4><ul>
+<li><p>要统计查询结果有多少条数据，可以用<code>count()</code>方法，比如统计有多少数据</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">count</span> = collection.<span class="keyword">find</span>().<span class="keyword">count</span>()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>或者统计符合某种条件的数据数,例如统计名字以a开头的</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">count</span> = collection.<span class="keyword">find</span>(&#123;<span class="string">'name'</span>:&#123;<span class="string">'$regex'</span>:<span class="string">'^a.*'</span>&#125;&#125;).<span class="keyword">count</span>()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="5-排序"><a href="#5-排序" class="headerlink" title="5.排序"></a>5.排序</h4><blockquote>
+<p>排序，直接调用<code>sort()</code>方法，并在其中传入排序的字段以及升降标志<br><code>pymongo.ASCENDING</code> 升序  <code>pymongo.DESCENDING</code>  降序<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">results  = collection.find().<span class="built_in">sort</span>(<span class="string">'name'</span>,pymongo.ASCENDING)</span><br><span class="line">print(<span class="built_in">result</span>[<span class="string">'name'</span>] <span class="keyword">for</span> <span class="built_in">result</span> <span class="keyword">in</span> results)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="6-偏移"><a href="#6-偏移" class="headerlink" title="6.偏移"></a>6.偏移</h4><blockquote>
+<p>在某些情况，我们只需要提取其中的几个元素，我就可以调用<code>skip()</code>方法，示例如下:<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">results = collection.<span class="keyword">find</span>().<span class="keyword">sort</span>(<span class="string">'name'</span>,pymongo.DESCENDING).skip(<span class="number">2</span>)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>这样我们就可以跳过前两个<br>另外，我们还可以用<code>limit()</code>方法来指定要去的个数,只取两个数据<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">results = collection.<span class="keyword">find</span>(&#123;<span class="string">'age'</span>:&#123;<span class="string">'$gt'</span>:<span class="number">20</span>&#125;&#125;).<span class="keyword">sort</span>(<span class="string">'name'</span>,pymongo.ASCENDING).skip(<span class="number">2</span>).limit(<span class="number">2</span>)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="7-数据的更新"><a href="#7-数据的更新" class="headerlink" title="7.数据的更新"></a>7.数据的更新</h4><blockquote>
+<p>对于数据的更新，我们可以用<code>upodate()</code>方法<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">condition=&#123;'name':'Mike'&#125;</span><br><span class="line">student = collection.find_one(condition)</span><br><span class="line">student['age'] = 25</span><br><span class="line">result = collection.update(condition,student) <span class="comment">#update()方法是将原条件和修改后的数据传入</span></span><br><span class="line">print(result)  <span class="comment">#返回的是字典类型</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><img src="/img/mongodb/10.jpg" alt="img"></p>
+<blockquote>
+<p>官方推荐 <code>update_one()</code>但是如果使用<code>update_one()</code>方法，第二个参数就不能传入字典，应该用<code>$</code>类型操作符作为字典的键名,示例如下：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">result</span> = collection.update_one(condition,&#123;<span class="string">'$set'</span>:student&#125;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><img src="/img/mongodb/11.jpg" alt="img"></p>
+<h4 id="8-数据的删除"><a href="#8-数据的删除" class="headerlink" title="8.数据的删除"></a>8.数据的删除</h4><blockquote>
+<p>删除的话，可以直接用<code>remove()</code>方法，符合条件的数据全部删除<br>这里依然推荐两个官方推荐方法  <code>delete_one()</code>和 <code>elete_many()</code><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">results = collection.delete_many(&#123;<span class="string">'age'</span>:&#123;<span class="string">'$gt'</span>:<span class="number">20</span>&#125;&#125;)</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(results)</span></span>  #返回的字典形式</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(results.deleted_count)</span></span>  #删除的个数</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><img src="/img/mongodb/12.jpg" alt="img"><br>此时也只有一条数据</p>
+
       
 
       
@@ -255,7 +373,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -305,7 +449,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/07/MongoDB数据库基本操作/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,6 +461,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2018/12/07/MySql数据库操作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MySql数据库操作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/06/ongoDB数据库/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MongoDB数据库</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -330,6 +493,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MongoDB的操作"><span class="toc-number">1.</span> <span class="toc-text">MongoDB的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-连接MongoDB"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">1.连接MongoDB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-MongoDB数据库，数据的插入"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">2.MongoDB数据库，数据的插入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-MongoDB数据库的查询"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">3.MongoDB数据库的查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-计数"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">4.计数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-排序"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">5.排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-偏移"><span class="toc-number">1.0.0.6.</span> <span class="toc-text">6.偏移</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-数据的更新"><span class="toc-number">1.0.0.7.</span> <span class="toc-text">7.数据的更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-数据的删除"><span class="toc-number">1.0.0.8.</span> <span class="toc-text">8.数据的删除</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -395,7 +571,7 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
