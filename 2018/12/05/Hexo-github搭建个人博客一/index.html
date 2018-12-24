@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/20.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/21.jpg">
 <meta property="og:image" content="https://lightfisher.github.io/img/hexo1/22.jpg">
-<meta property="og:updated_time" content="2018-12-06T12:52:18.817Z">
+<meta property="og:updated_time" content="2018-12-24T13:56:35.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+github搭建个人博客一">
 <meta name="twitter:description" content="Hexo+github搭建个人博客 一直想搭建个人博客来着，本来想用Python，Django在自己的服务器上自己搭建，忽然想起来，以前好像见过同学用过Hexo框架搭建个人博客，所以我就先用Hexo搭建看看。因为网上的教程或多或少有时候都有点参差不齐，自己也是看得脑壳疼，所以下面我简单把我这两天搭建出现的问题和方法，写成博客，就当自己练手吧。">
@@ -222,7 +222,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">968字</span>
+        <span class="post-count">1k字</span>
       </span>
     </span>
 
@@ -297,7 +297,10 @@
 <ul>
 <li>安装以后呢，你可以输入以下代码</li>
 </ul>
-<figure class="highlight leaf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">hexo init Hexo #我认为就是创建了一个他的项目框架</span><br><span class="line">cd Hexo #进入你创建的那个目录</span><br><span class="line">npm install</span><br><span class="line">hexo generate <span class="function"><span class="keyword">#</span><span class="params">(可简写成 <span class="variable">hexo</span> <span class="variable">g</span>)</span></span></span><br><span class="line">hexo server <span class="function"><span class="keyword">#</span><span class="params">(可简写成 <span class="variable">hexo</span> <span class="variable">s</span>)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight leaf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /  </span><br><span class="line">hexo init Hexo #我创建了一个他的项目框架</span><br><span class="line">cd Hexo #进入你创建的那个目录</span><br><span class="line">hexo generate <span class="function"><span class="keyword">#</span><span class="params">(可简写成 <span class="variable">hexo</span> <span class="variable">g</span>)</span></span></span><br><span class="line">hexo server <span class="function"><span class="keyword">#</span><span class="params">(可简写成 <span class="variable">hexo</span> <span class="variable">s</span>)</span></span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这个就是在你Git安装目录下进行初始化一个hexo博客项目，你可以直接到自己想要创建的地方进行<code>hexo init +&lt;你的项目名称&gt;</code> </p>
+</blockquote>
 <p>由于我懒得重新创了，我就用网上别人的截图，下面我会注明</p>
 <p><img src="https://lightfisher.github.io/img/hexo1/15.jpg" alt="img"></p>
 <p><img src="https://lightfisher.github.io/img/hexo1/16.jpg" alt="img"></p>
@@ -627,11 +630,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+                <a href="javascript:void(0)" class="js-tag color2">hexo搭建</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">hexo搭建</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -647,11 +654,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -659,15 +666,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+                <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
               </li>
              
               <li class="article-tag-list-item">
