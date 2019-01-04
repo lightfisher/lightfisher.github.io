@@ -6,43 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Git 合并 | Lightfish&#39;s Blog</title>
+  <title>Python实现免费发短信 | Lightfish&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git中的合并操作 上次的博客，我们讲解了Git的分支基本作用，这里，我们就来拓展一下，Git中的合并操作">
-<meta name="keywords" content="Python,爬虫,Django,html5,程序猿,Student,Coder,前端,Hexo,Java">
+  <meta name="description" content="twilio实现免费发短信 一直对这方面蛮感兴趣的，比如wxpy模块，登录微信。但是依旧有着小小的缺陷，所以，今天我要讲的是twilio模块实现免费发送短信，可以配合爬虫实现定时的小功能，比如，定时每天给你要发送的对象发天气预报什么的，emmm，这些就不是今天所讲的范围内了。">
+<meta name="keywords" content="Python,twilio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git 合并">
-<meta property="og:url" content="http://yoursite.com/2018/12/26/Git-合并/index.html">
+<meta property="og:title" content="Python实现免费发短信">
+<meta property="og:url" content="http://yoursite.com/2019/01/04/thon实现免费发短信/index.html">
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
-<meta property="og:description" content="Git中的合并操作 上次的博客，我们讲解了Git的分支基本作用，这里，我们就来拓展一下，Git中的合并操作">
+<meta property="og:description" content="twilio实现免费发短信 一直对这方面蛮感兴趣的，比如wxpy模块，登录微信。但是依旧有着小小的缺陷，所以，今天我要讲的是twilio模块实现免费发送短信，可以配合爬虫实现定时的小功能，比如，定时每天给你要发送的对象发天气预报什么的，emmm，这些就不是今天所讲的范围内了。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C1.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C2.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C3.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C4.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C5.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C6.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C7.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C8.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C9.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C10.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C11.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C12.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C13.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C14.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C15.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C16.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C17.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C19.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C20.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C21.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C22.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C23.jpg">
-<meta property="og:updated_time" content="2018-12-26T11:36:48.268Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuhqsnz6oj30ro0fztfv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuhwvpzm3j31h70qejtf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuhut2ynmj31hc0pstej.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyui2h6deuj31gw0qldk0.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyui61xcx5j31gt0pqacq.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuiaawq75j30h407uwew.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuiacol0yj30h107j3yw.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuiirgiruj31fi08g0vx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuilcwg6nj31h70qntdf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuisad62mj30zm0khack.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuitvr8svj30yi1pcn2a.jpg">
+<meta property="og:updated_time" content="2019-01-04T06:15:31.883Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 合并">
-<meta name="twitter:description" content="Git中的合并操作 上次的博客，我们讲解了Git的分支基本作用，这里，我们就来拓展一下，Git中的合并操作">
-<meta name="twitter:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C1.jpg">
+<meta name="twitter:title" content="Python实现免费发短信">
+<meta name="twitter:description" content="twilio实现免费发短信 一直对这方面蛮感兴趣的，比如wxpy模块，登录微信。但是依旧有着小小的缺陷，所以，今天我要讲的是twilio模块实现免费发送短信，可以配合爬虫实现定时的小功能，比如，定时每天给你要发送的对象发天气预报什么的，emmm，这些就不是今天所讲的范围内了。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fyuhqsnz6oj30ro0fztfv.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -205,14 +194,14 @@
           <div id="js-content" class="content-ll">
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<article id="post-Git-合并" class="article article-type-post " itemscope="" itemprop="blogPost">
+<article id="post-thon实现免费发短信" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Git 合并
+      Python实现免费发短信
     </h1>
   
 
@@ -223,7 +212,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.4k字</span>
+        <span class="post-count">704字</span>
       </span>
     </span>
 
@@ -232,7 +221,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -240,123 +229,66 @@
         <!-- 设置浏览 -->
         <br><span style="color: rgb(196, 197, 253); font-size: 14px;">文章总共浏览了: <span id="busuanzi_value_page_pv"></span>次</span>
         
-        <a href="/2018/12/26/Git-合并/" class="archive-article-date">
-  	<time datetime="2018-12-26T08:56:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-26</time>
+        <a href="/2019/01/04/thon实现免费发短信/" class="archive-article-date">
+  	<time datetime="2019-01-04T05:22:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Git中的合并操作"><a href="#Git中的合并操作" class="headerlink" title="Git中的合并操作"></a>Git中的合并操作</h1><blockquote>
-<p>上次的博客，我们讲解了Git的分支基本作用，这里，我们就来拓展一下，Git中的合并操作</p>
+        <h1 id="twilio实现免费发短信"><a href="#twilio实现免费发短信" class="headerlink" title="twilio实现免费发短信"></a>twilio实现免费发短信</h1><blockquote>
+<p>一直对这方面蛮感兴趣的，比如wxpy模块，登录微信。但是依旧有着小小的缺陷，所以，今天我要讲的是twilio模块实现免费发送短信，可以配合爬虫实现定时的小功能，比如，定时每天给你要发送的对象发天气预报什么的，emmm，这些就不是今天所讲的范围内了。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h2><blockquote>
-<p>情景提要，上次我们是在<code>master</code>分支下有着<code>a.txt</code>和<code>README.md</code>，而创建的<code>feature1</code>分支下有<code>b.txt</code>文件</p>
+<h2 id="twilio-模块的安装"><a href="#twilio-模块的安装" class="headerlink" title="twilio 模块的安装"></a>twilio 模块的安装</h2><blockquote>
+<p>安装<code>twilio</code>就和一般的安装一样，用<code>pip</code>， <code>pip install twilio</code>即可安装。</p>
 </blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuhqsnz6oj30ro0fztfv.jpg" alt="twilio"></p>
 <blockquote>
-<p>然后回归我们的主题，再次之前，我们先来学习一下<code>git log</code>的操作，这个操作是查看git操作的日志，所以，让我们学习一下,为了更好的讲解这个较为重要的命令行<code>git log</code>,我提前使用<code>git merge feature1</code>的合并操作。So</p>
+<p>当然也会安装别的依赖库。。</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C1.jpg" alt="img"></p>
+<h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h2><blockquote>
+<p>1.安装好库，就需要带官网进行注册（PS：这里需要翻墙，毕竟是国外的网站）。这里我再重新注册一遍,这里就是填写你的一些信息，很简单，我就不多说了。</p>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuhwvpzm3j31h70qejtf.jpg" alt="img"></p>
 <blockquote>
-<p>在上图中，我们先是用了<code>git merge</code>操作将<code>feature1</code>分支合并到了<code>msater</code>的主分支,并用<code>git branch -d feature1</code>删除了分支</p>
+<p>2.注册完登录后，就是基本如下图。值得注意的是，<code>ACCOUNT SID</code>和<code>AUTH TOKEN</code>这两个参数是等会会用的。</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C2.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuhut2ynmj31hc0pstej.jpg" alt="img"></p>
 <blockquote>
-<p><code>git log</code>查看当前分支的log日志，可以看到，有我前面合并操作的日志，因为<code>feature1</code>分支中只有<code>b.txt</code>所以就只有<code>add b.txt</code></p>
+<p>3.登录后，要想发短信，当然要有发送方咯，所以我们要去获取它。第一次应该是没有的。所以你要去注册一个，放心是免费的</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C3.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyui2h6deuj31gw0qldk0.jpg" alt="img"></p>
 <blockquote>
-<p><code>git log --oneline</code> 这个命令就是上图，能让log界面更加的简洁,另外 <code>git log --oneline -3</code>就是查看前几位</p>
+<p>4.有了发送方，就要有接受方了。因为这个接收方是要验证的，所以并不可以进行什么短信轰炸。。点击下图的加号，就可以进行验证</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C4.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyui61xcx5j31gt0pqacq.jpg" alt="img"></p>
 <blockquote>
-<p><code>git show &lt;commit id&gt;</code> 如果你想看某个操作更加详细的日子，你就可以用这个命令，后面的的id就是你想看的日志id，可以清楚的看到，我们这个日志就只是添加了一个b.txt，而且b.txt的内容都有显示</p>
+<p>5.点击加号后，会出现下一图，它是语音验证，你想进行短信验证就点击下<code>text you instead.</code>,记得修改你的国家地区，然后输入你要发送人的手机号码进行验证，会发一个验证码给你输入的手机号。</p>
 </blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuiaawq75j30h407uwew.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuiacol0yj30h107j3yw.jpg" alt="img"></p>
 <blockquote>
-<p><code>git log --all --decorate --oneline --graph</code>，这个命令能让log日志看起来更加的顺眼,虽然现在看不出来，但是确实什么有用</p>
+<p>6.<strong>究极注意</strong>，你一定要去设置了进行设置中国地区，否则就是下面这个错误，国内网上教程都没有讲这里。</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C5.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuiirgiruj31fi08g0vx.jpg" alt="img"></p>
 <blockquote>
-<p>上述的<code>git log --all --decorate --oneline --graph</code>,虽然有用(emmm,等会再说哪有用),但是命令实在是太长了，所以我这里在教一点干货,输入</p>
+<p>7.所以你要去<a href="https://www.twilio.com/console/sms/settings/geo-permissions" target="_blank" rel="noopener">这里</a>进行设置中国，默认我是没有的。我的界面左边那个图片是没有的，你也可以直接输入网址: <a href="https://www.twilio.com/console/sms/settings" target="_blank" rel="noopener">https://www.twilio.com/console/sms/settings</a></p>
 </blockquote>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vi ~<span class="string">/.gitconfig</span>  <span class="comment">#修改git的配置环境</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入以下代码</span></span><br><span class="line">[<span class="keyword">alias</span>]</span><br><span class="line">	co = checkout</span><br><span class="line">	br = branch</span><br><span class="line">	ci = commit</span><br><span class="line">	st = status</span><br><span class="line">	dog = log <span class="params">--all</span> <span class="params">--decorate</span> <span class="params">--oneline</span> <span class="params">--graph</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuilcwg6nj31h70qntdf.jpg" alt="img"></p>
+<h2 id="代码部分"><a href="#代码部分" class="headerlink" title="代码部分"></a>代码部分</h2><blockquote>
+<p>代码部分就很简单，如下：</p>
+</blockquote>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">from</span> twilio.rest import Client</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里的account和token就是你前面登录主页的那两个</span></span><br><span class="line">account = <span class="string">'Your ACCOUNT SID'</span></span><br><span class="line"><span class="keyword">token</span> = <span class="string">'Your AUTH TOKEN'</span></span><br><span class="line"></span><br><span class="line">client = Client(account,<span class="keyword">token</span>)</span><br><span class="line"></span><br><span class="line">message = client.messages.<span class="built_in">create</span>(</span><br><span class="line">    from_=<span class="string">'Your number'</span>, <span class="comment">#这里写你前面注册给你的手机号，上注册账号的第三步</span></span><br><span class="line">    <span class="built_in">to</span>=<span class="string">'+86*******'</span>, <span class="comment">#这里就是你前面验证的发送对象，上注册账号的第四步</span></span><br><span class="line">    body=<span class="string">'Hello, I\'m from Python...'</span> <span class="comment">#这里就是你要发送的信息</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(message.sid)</span><br></pre></td></tr></table></figure>
+<p>截图如下：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuisad62mj30zm0khack.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyuitvr8svj30yi1pcn2a.jpg" alt="img"></p>
+<p>emmm,上面两条是我之前测试的。</p>
 <blockquote>
-<p>上述代码就是可以简易的输入，<code>git log --all --decorate --oneline --graph</code>就等于<code>git dog</code></p>
+<p>依然值得注意的就是注册账号中的第六、七步，异地要设置自己的国家哦~</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C6.jpg" alt="alias"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C7.jpg" alt="img"></p>
-<h2 id="log日志讲解"><a href="#log日志讲解" class="headerlink" title="log日志讲解"></a>log日志讲解</h2><blockquote>
-<p>我们先<code>git checkout -b f1</code>创建分支并跳转到<code>f1</code>分支,然后在<code>f1</code>分支下生成<code>c.txt</code>，并添加<code>This is c.txt</code>,然后commit一下</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C8.jpg" alt="img"></p>
-<blockquote>
-<p>因为前面我们配置了config，所以我们就可以使用简洁字母进行操作。另外我们可以看一眼log日志第一行的<code>Head -&gt; f1</code>,可以理解成指针指向f1分支，也就是在f1分支下进行了后面的<code>add c.txt</code>操作，我们用<code>git show 11293e0</code>可以详细查看我们进行了什么操作</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C9.jpg" alt="img"></p>
-<blockquote>
-<p>上图中我们可以看到，<code>merge</code>用的是<code>Fast-foward</code>方式，这个方式是直接帮你提交了，逻辑并不是很好/有兴趣可以去研究一下，输入<code>git merge --help</code>就能看官方文档了。这里我就推荐大家用<code>git merge f1 --no-ff</code>,这个方法能让我们的日志看的更加的清晰。如下图</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C10.jpg" alt="img"></p>
-<blockquote>
-<p>我先是跳转到f1的分支，创建了一个d.txt文件，并提交一次，然后<br></p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C11.jpg" alt="img"></p>
-<blockquote>
-<p>回主master分支，它也提示了比master分支多了2个commits</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C12.jpg" alt="img"></p>
-<blockquote>
-<p>输入<code>git merge f1 --no-ff</code>时，它会提醒了进行适当的修改，你可以不该，按一下<code>esc</code>，并按<code>shift+&#39;:&#39;</code>，shift加冒号，输入<code>wq</code>退出,然后输入<code>git log</code>查看，你会发现它先是在f1的分支下add一次，然后合并到master主分支。如果你还是看不出来，这个时候你就可以输入<code>git log --all --decorate --oneline --graph</code>或者是配置完了的<code>git dog</code>，<code>git log --oneline</code>也还可以，但是显然前者更加的显而易见</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C13.jpg" alt="img"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C14.jpg" alt="img"></p>
-<h2 id="上传到远程仓库"><a href="#上传到远程仓库" class="headerlink" title="上传到远程仓库"></a>上传到远程仓库</h2><blockquote>
-<p>我们用<code>git push</code>方法，上传到远程仓库，<strong>注意</strong>，这里的上传默认是<code>master</code>分支</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C15.jpg" alt="img"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C16.jpg" alt="img"></p>
-<blockquote>
-<p>所以我们用<code>git push origin f1:feature1</code>,本地是f1分支，仓库是feature1，如果名称不对，会自动创建一个。</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C17.jpg" alt="img"></p>
-<blockquote>
-<p>我们先在远程仓库的master分支下修改a.txt，然后在本地的master分支下进行<code>git pull</code>操作，如果要在master分支下</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C19.jpg" alt="img"></p>
-<blockquote>
-<p>上述的操作，只能将github上的修改的pull到master分支内，f1分支并没有修改</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C20.jpg" alt="img"></p>
-<blockquote>
-<p>所以我们如果想要f1分支和master分支同步，我们进入f1分支，然后执行<code>git merge</code>操作</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C21.jpg" alt="img"></p>
-<blockquote>
-<p>但是我们也是可以用<code>git rebase master</code>的方法合并，因为我也是不是十分的清楚这两者的关系，所以我就简单得把我的理解阐述一遍</p>
-</blockquote>
-<h3 id="merge-rebase-区别"><a href="#merge-rebase-区别" class="headerlink" title="merge rebase 区别"></a>merge rebase 区别</h3><blockquote>
-<p>merge 操作试讲两个分支的历史连接在一起;合并操作;更加关注历史记录</p>
-</blockquote>
-<blockquote>
-<p>rebase 如上就是f1分支移动到master分支的最后一次commit，不会像merge一样又一次不必要的commit，没有提交操作，只是复制</p>
-</blockquote>
-<blockquote>
-<p>rebase 黄金法则：绝对不要再公共分支使用rebase master</p>
-</blockquote>
-<h2 id="分支冲突"><a href="#分支冲突" class="headerlink" title="分支冲突"></a>分支冲突</h2><blockquote>
-<p>我们先新建分支f2，并修改a.txt。然后切换到f1分支，修改a.txt文件。然后进入f2分支进行合并(merge)，这个时候就会发生冲突(记得修改要commit一次)，如下：</p>
-</blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C22.jpg" alt="img"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C23.jpg" alt="img"></p>
-<blockquote>
-<p>上图发生的，a.txt就变成第二个红线框，框内上面的就是本来自己的(Head),下面那个就是冲突的。所以我们就要修改，第一种方法就是直接用编辑器修改，另外一种就是输入<code>git mergetool</code>,并敲回车,就可以进去对所有发生冲突的文件进行修改(这里就不贴图了，记住这个<code>git mergetool</code>就行)</p>
-</blockquote>
-<blockquote>
-<p>对了修改后，会生成一个<code>a.txt.orig</code>，这个就是发生冲突的记录</p>
-</blockquote>
-<p><br><br><br>这次的博客就到这里了，So<br><br>Just have fun…</p>
+<p><br><br><br><br>这次的博客就到这里了，So<br><br>Just Have Fun…</p>
 
       
 
@@ -391,7 +323,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">twilio</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -441,7 +399,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/26/Git-合并/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/04/thon实现免费发短信/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -455,18 +413,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/01/04/thon实现免费发短信/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/01/04/ython-Admin开发/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Python实现免费发短信
+          Python Admin开发
         
       </div>
     </a>
   
   
-    <a href="/2018/12/24/jango-上传图片/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Django 上传图片</div>
+    <a href="/2018/12/26/Git-合并/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git 合并</div>
       <i class="icon-circle-right"></i>
     </a>
   
