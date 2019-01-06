@@ -16,33 +16,34 @@
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
 <meta property="og:description" content="Git中的合并操作 上次的博客，我们讲解了Git的分支基本作用，这里，我们就来拓展一下，Git中的合并操作">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C1.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C2.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C3.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C4.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C5.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C6.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C7.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C8.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C9.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C10.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C11.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C12.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C13.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C14.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C15.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C16.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C17.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C19.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C20.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C21.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C22.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C23.jpg">
-<meta property="og:updated_time" content="2018-12-26T11:36:48.268Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwhmc3q0j30fx04paas.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwhmhbejj30fx060q41.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwhmjhx9j30eq02bmxf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwirwc68j30gg0dzq57.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwiryv6aj30es02874n.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwis1vtyj30gk0c03zd.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwjs4owtj30fi05i0tv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwjs8g63j30gi0dcju5.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwjscechj30g208udhf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwkt5wlwj30fg05njsb.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwkt9vn3j30ey084ta8.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwktcjdyj30fw02fgly.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwlk510kj30gd0bc76s.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwlk934gj30fk045dgd.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwlkd3ntj30fr039q3g.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwqu14kuj31260byn16.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwqu4xxsj30wm0dyjt4.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwqu96u1j30ej02lq3b.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwrwl5tqj30tz08yab6.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwrwoe08j30gj0a375y.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwrwr8e6j30g607jgmx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwt6vy9uj30gi0e3go9.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwt6ylkwj30g407hmyc.jpg">
+<meta property="og:updated_time" content="2019-01-06T07:45:10.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 合并">
 <meta name="twitter:description" content="Git中的合并操作 上次的博客，我们讲解了Git的分支基本作用，这里，我们就来拓展一下，Git中的合并操作">
-<meta name="twitter:image" content="http://pjas65wzi.bkt.clouddn.com\git_test3%5C1.jpg">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywwhmc3q0j30fx04paas.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -258,26 +259,26 @@
 <blockquote>
 <p>然后回归我们的主题，再次之前，我们先来学习一下<code>git log</code>的操作，这个操作是查看git操作的日志，所以，让我们学习一下,为了更好的讲解这个较为重要的命令行<code>git log</code>,我提前使用<code>git merge feature1</code>的合并操作。So</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C1.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwhmc3q0j30fx04paas.jpg" alt="img"></p>
 <blockquote>
 <p>在上图中，我们先是用了<code>git merge</code>操作将<code>feature1</code>分支合并到了<code>msater</code>的主分支,并用<code>git branch -d feature1</code>删除了分支</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C2.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwhmhbejj30fx060q41.jpg" alt="img"></p>
 <blockquote>
 <p><code>git log</code>查看当前分支的log日志，可以看到，有我前面合并操作的日志，因为<code>feature1</code>分支中只有<code>b.txt</code>所以就只有<code>add b.txt</code></p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C3.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwhmjhx9j30eq02bmxf.jpg" alt="img"></p>
 <blockquote>
 <p><code>git log --oneline</code> 这个命令就是上图，能让log界面更加的简洁,另外 <code>git log --oneline -3</code>就是查看前几位</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C4.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwirwc68j30gg0dzq57.jpg" alt="img"></p>
 <blockquote>
 <p><code>git show &lt;commit id&gt;</code> 如果你想看某个操作更加详细的日子，你就可以用这个命令，后面的的id就是你想看的日志id，可以清楚的看到，我们这个日志就只是添加了一个b.txt，而且b.txt的内容都有显示</p>
 </blockquote>
 <blockquote>
-<p><code>git log --all --decorate --oneline --graph</code>，这个命令能让log日志看起来更加的顺眼,虽然现在看不出来，但是确实什么有用</p>
+<p><code>git log --all --decorate --oneline --graph</code>，这个命令能让log日志看起来更加的顺眼,虽然现在看不出来，但是确实有用</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C5.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwiryv6aj30es02874n.jpg" alt="img"></p>
 <blockquote>
 <p>上述的<code>git log --all --decorate --oneline --graph</code>,虽然有用(emmm,等会再说哪有用),但是命令实在是太长了，所以我这里在教一点干货,输入</p>
 </blockquote>
@@ -285,54 +286,55 @@
 <blockquote>
 <p>上述代码就是可以简易的输入，<code>git log --all --decorate --oneline --graph</code>就等于<code>git dog</code></p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C6.jpg" alt="alias"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C7.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwis1vtyj30gk0c03zd.jpg" alt="alias"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwjs4owtj30fi05i0tv.jpg" alt="img"></p>
 <h2 id="log日志讲解"><a href="#log日志讲解" class="headerlink" title="log日志讲解"></a>log日志讲解</h2><blockquote>
 <p>我们先<code>git checkout -b f1</code>创建分支并跳转到<code>f1</code>分支,然后在<code>f1</code>分支下生成<code>c.txt</code>，并添加<code>This is c.txt</code>,然后commit一下</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C8.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwjs8g63j30gi0dcju5.jpg" alt="img"></p>
 <blockquote>
 <p>因为前面我们配置了config，所以我们就可以使用简洁字母进行操作。另外我们可以看一眼log日志第一行的<code>Head -&gt; f1</code>,可以理解成指针指向f1分支，也就是在f1分支下进行了后面的<code>add c.txt</code>操作，我们用<code>git show 11293e0</code>可以详细查看我们进行了什么操作</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C9.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwjscechj30g208udhf.jpg" alt="img"></p>
 <blockquote>
 <p>上图中我们可以看到，<code>merge</code>用的是<code>Fast-foward</code>方式，这个方式是直接帮你提交了，逻辑并不是很好/有兴趣可以去研究一下，输入<code>git merge --help</code>就能看官方文档了。这里我就推荐大家用<code>git merge f1 --no-ff</code>,这个方法能让我们的日志看的更加的清晰。如下图</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C10.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwkt5wlwj30fg05njsb.jpg" alt="img"></p>
 <blockquote>
 <p>我先是跳转到f1的分支，创建了一个d.txt文件，并提交一次，然后<br></p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C11.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwkt9vn3j30ey084ta8.jpg" alt="img"></p>
 <blockquote>
 <p>回主master分支，它也提示了比master分支多了2个commits</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C12.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwktcjdyj30fw02fgly.jpg" alt="img"></p>
 <blockquote>
-<p>输入<code>git merge f1 --no-ff</code>时，它会提醒了进行适当的修改，你可以不该，按一下<code>esc</code>，并按<code>shift+&#39;:&#39;</code>，shift加冒号，输入<code>wq</code>退出,然后输入<code>git log</code>查看，你会发现它先是在f1的分支下add一次，然后合并到master主分支。如果你还是看不出来，这个时候你就可以输入<code>git log --all --decorate --oneline --graph</code>或者是配置完了的<code>git dog</code>，<code>git log --oneline</code>也还可以，但是显然前者更加的显而易见</p>
+<p>输入<code>git merge f1 --no-ff</code>时，它会提醒了进行适当的修改，你可以不改，按一下<code>esc</code>，并按<code>shift&#39;+:&#39;</code>，shift加冒号，输入<code>wq</code>退出,然后输入<code>git log</code>查看，你会发现它先是在f1的分支下add一次，然后合并到master主分支。如果你还是看不出来，这个时候你就可以输入<code>git log --all --decorate --oneline --graph</code>或者是配置完了的<code>git dog</code>，<code>git log --oneline</code>也还可以，但是显然前者更加的显而易见</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C13.jpg" alt="img"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C14.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwlk510kj30gd0bc76s.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwlk934gj30fk045dgd.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwlkd3ntj30fr039q3g.jpg" alt="img"></p>
 <h2 id="上传到远程仓库"><a href="#上传到远程仓库" class="headerlink" title="上传到远程仓库"></a>上传到远程仓库</h2><blockquote>
 <p>我们用<code>git push</code>方法，上传到远程仓库，<strong>注意</strong>，这里的上传默认是<code>master</code>分支</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C15.jpg" alt="img"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C16.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwqu14kuj31260byn16.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwqu4xxsj30wm0dyjt4.jpg" alt="img"></p>
 <blockquote>
 <p>所以我们用<code>git push origin f1:feature1</code>,本地是f1分支，仓库是feature1，如果名称不对，会自动创建一个。</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C17.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwqu96u1j30ej02lq3b.jpg" alt="img"></p>
 <blockquote>
 <p>我们先在远程仓库的master分支下修改a.txt，然后在本地的master分支下进行<code>git pull</code>操作，如果要在master分支下</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C19.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwrwl5tqj30tz08yab6.jpg" alt="img"></p>
 <blockquote>
 <p>上述的操作，只能将github上的修改的pull到master分支内，f1分支并没有修改</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C20.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwrwoe08j30gj0a375y.jpg" alt="img"></p>
 <blockquote>
 <p>所以我们如果想要f1分支和master分支同步，我们进入f1分支，然后执行<code>git merge</code>操作</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C21.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwrwr8e6j30g607jgmx.jpg" alt="img"></p>
 <blockquote>
 <p>但是我们也是可以用<code>git rebase master</code>的方法合并，因为我也是不是十分的清楚这两者的关系，所以我就简单得把我的理解阐述一遍</p>
 </blockquote>
@@ -348,8 +350,8 @@
 <h2 id="分支冲突"><a href="#分支冲突" class="headerlink" title="分支冲突"></a>分支冲突</h2><blockquote>
 <p>我们先新建分支f2，并修改a.txt。然后切换到f1分支，修改a.txt文件。然后进入f2分支进行合并(merge)，这个时候就会发生冲突(记得修改要commit一次)，如下：</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C22.jpg" alt="img"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com\git_test3%5C23.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwt6vy9uj30gi0e3go9.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywwt6ylkwj30g407hmyc.jpg" alt="img"></p>
 <blockquote>
 <p>上图发生的，a.txt就变成第二个红线框，框内上面的就是本来自己的(Head),下面那个就是冲突的。所以我们就要修改，第一种方法就是直接用编辑器修改，另外一种就是输入<code>git mergetool</code>,并敲回车,就可以进去对所有发生冲突的文件进行修改(这里就不贴图了，记住这个<code>git mergetool</code>就行)</p>
 </blockquote>
@@ -620,7 +622,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -632,7 +658,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+                <a href="javascript:void(0)" class="js-tag color2">django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -640,39 +670,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
               </li>
             
             <div class="clearfix"></div>

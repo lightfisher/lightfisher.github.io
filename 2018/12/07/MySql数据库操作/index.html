@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
 <meta property="og:description" content="MySql数据库的基本操作 MySql是关系型数据，关系型数据库是基于关系模型的数据库，而关系模型是通过二维表来保存的，所以它的存储方式就是行列组成的表，每一列是一个字段，每一行是一条记录。在Python2中连接MySql的库大多是MySQLdb，但是这个库在Python3中不在支持，所以这里我推荐是PyMySQL。相信PyMySQL的安装大家都懂，只需要pip install pymysql下载">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/mysql/13.jpg">
-<meta property="og:updated_time" content="2018-12-12T07:55:39.377Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywxpx0ffqj30r10iq42f.jpg">
+<meta property="og:updated_time" content="2019-01-06T08:16:31.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySql数据库操作">
 <meta name="twitter:description" content="MySql数据库的基本操作 MySql是关系型数据，关系型数据库是基于关系模型的数据库，而关系模型是通过二维表来保存的，所以它的存储方式就是行列组成的表，每一列是一个字段，每一行是一条记录。在Python2中连接MySql的库大多是MySQLdb，但是这个库在Python3中不在支持，所以这里我推荐是PyMySQL。相信PyMySQL的安装大家都懂，只需要pip install pymysql下载">
-<meta name="twitter:image" content="http://pjas65wzi.bkt.clouddn.com/mysql/13.jpg">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywxpx0ffqj30r10iq42f.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -253,7 +253,7 @@
 </blockquote>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sql = '<span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> students (<span class="keyword">id</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,<span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">25</span>)<span class="keyword">NOT</span> <span class="literal">NULL</span>,age <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>))<span class="string">'</span></span><br><span class="line"><span class="string">cursor.execute(sql)</span></span><br></pre></td></tr></table></figure>
 <p>这里就是成功截图</p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/mysql/13.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywxpx0ffqj30r10iq42f.jpg" alt="img"></p>
 <p>emmm，我用的是mysql的一个可视化工具<code>navicat</code>,你可以到这来<a href="https://pan.baidu.com/s/13BDqu8idklKPbYO1HPO5TQ" target="_blank" rel="noopener">下载</a> 密码: 5w3y<br>下面就是真正的mysql基本操作了</p>
 <h3 id="2-插入数据"><a href="#2-插入数据" class="headerlink" title="2.插入数据"></a>2.插入数据</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">id</span> = <span class="string">'2016210405068'</span></span><br><span class="line"><span class="attr">name</span> = <span class="string">'言语'</span></span><br><span class="line"><span class="attr">age</span> = <span class="number">18</span></span><br><span class="line"><span class="attr">sql</span> = <span class="string">'INSERT INTO students(id,name,age) values(%s,%s,%s)'</span> #sql语句</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -597,7 +597,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -609,7 +633,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+                <a href="javascript:void(0)" class="js-tag color2">django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -617,39 +645,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
               </li>
             
             <div class="clearfix"></div>

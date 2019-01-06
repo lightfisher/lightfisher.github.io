@@ -16,16 +16,16 @@
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
 <meta property="og:description" content="MongoDB的操作1.连接MongoDB Python 想要连接MongoDB需要安装pymongo，emm，安装方法可以在cmd下，pip安装(pip install pymongo)安装完了后你就可以用一下代码连接MongoDB">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/mongodb/8.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/mongodb/9.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/mongodb/10.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/mongodb/11.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/mongodb/12.jpg">
-<meta property="og:updated_time" content="2018-12-12T07:59:42.071Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywxqlkdgrj30tr0drtcv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywxqlo9zej314809tq5e.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywxqlv74vj30v309r765.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywxta6g26j30v809nmyz.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywxta9ry4j30o006j0te.jpg">
+<meta property="og:updated_time" content="2019-01-06T08:19:53.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB数据库基本操作">
 <meta name="twitter:description" content="MongoDB的操作1.连接MongoDB Python 想要连接MongoDB需要安装pymongo，emm，安装方法可以在cmd下，pip安装(pip install pymongo)安装完了后你就可以用一下代码连接MongoDB">
-<meta name="twitter:image" content="http://pjas65wzi.bkt.clouddn.com/mongodb/8.jpg">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywxqlkdgrj30tr0drtcv.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -236,12 +236,12 @@
 </blockquote>
 <a id="more"></a>
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import pymongo</span><br><span class="line"><span class="keyword">client</span> = pymongo.MongoClient(host=<span class="string">'localhost'</span>,port=<span class="string">'27017'</span>) <span class="meta">#默认端口27017</span></span><br><span class="line">db = <span class="keyword">client</span>[<span class="string">'mydb'</span>] <span class="meta">#指定mydb这个数据库，如果没有会自动创建</span></span><br><span class="line">collection = db[<span class="string">'students'</span>]  <span class="meta">#指定students这个集合，如果没有会自动创建一个</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/mongodb/8.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywxqlkdgrj30tr0drtcv.jpg" alt="img"></p>
 <h4 id="2-MongoDB数据库，数据的插入"><a href="#2-MongoDB数据库，数据的插入" class="headerlink" title="2.MongoDB数据库，数据的插入"></a>2.MongoDB数据库，数据的插入</h4><blockquote>
 <p>插入数据，注意是已字典的形式。比如插入以下数据</p>
 </blockquote>
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">student=&#123;</span><br><span class="line">  <span class="string">'id'</span>:<span class="number">20180101</span>,</span><br><span class="line">  <span class="string">'name'</span>:<span class="string">'Jack'</span>,</span><br><span class="line">  <span class="string">'age'</span>:<span class="number">18</span>,</span><br><span class="line">  <span class="string">'gender'</span>:<span class="string">'male'</span></span><br><span class="line">&#125;</span><br><span class="line">用 collection.<span class="keyword">insert</span>(student)</span><br></pre></td></tr></table></figure>
-<p>如下图<br><img src="http://pjas65wzi.bkt.clouddn.com/mongodb/9.jpg" alt="img"></p>
+<p>如下图<br><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywxqlo9zej314809tq5e.jpg" alt="img"></p>
 <blockquote>
 <p>最新官方推荐<code>insert_one()</code>插入一条数据，返回的不同，是InsertOneResult对象<br>在MongoDB中都有一个_id属性来唯一标识，如果没有就会自动产生一个ObjectId类型的_id属性，返回_id值<br>当然也可以一次性插入多条数据  最新官方推荐 <code>insert_many()</code>来插入多条数据,或者依旧用<code>insert</code>,<code>collection.insert([student1,student2])</code>,注意是列表形式。</p>
 </blockquote>
@@ -331,15 +331,15 @@
 <h4 id="7-数据的更新"><a href="#7-数据的更新" class="headerlink" title="7.数据的更新"></a>7.数据的更新</h4><blockquote>
 <p>对于数据的更新，我们可以用<code>upodate()</code>方法<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">condition=&#123;'name':'Mike'&#125;</span><br><span class="line">student = collection.find_one(condition)</span><br><span class="line">student['age'] = 25</span><br><span class="line">result = collection.update(condition,student) <span class="comment">#update()方法是将原条件和修改后的数据传入</span></span><br><span class="line">print(result)  <span class="comment">#返回的是字典类型</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/mongodb/10.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywxqlv74vj30v309r765.jpg" alt="img"></p>
 <blockquote>
 <p>官方推荐 <code>update_one()</code>但是如果使用<code>update_one()</code>方法，第二个参数就不能传入字典，应该用<code>$</code>类型操作符作为字典的键名,示例如下：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">result</span> = collection.update_one(condition,&#123;<span class="string">'$set'</span>:student&#125;)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/mongodb/11.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywxta6g26j30v809nmyz.jpg" alt="img"></p>
 <h4 id="8-数据的删除"><a href="#8-数据的删除" class="headerlink" title="8.数据的删除"></a>8.数据的删除</h4><blockquote>
 <p>删除的话，可以直接用<code>remove()</code>方法，符合条件的数据全部删除<br>这里依然推荐两个官方推荐方法  <code>delete_one()</code>和 <code>elete_many()</code><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">results = collection.delete_many(&#123;<span class="string">'age'</span>:&#123;<span class="string">'$gt'</span>:<span class="number">20</span>&#125;&#125;)</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(results)</span></span>  #返回的字典形式</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(results.deleted_count)</span></span>  #删除的个数</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/mongodb/12.jpg" alt="img"><br>此时也只有一条数据</p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywxta9ry4j30o006j0te.jpg" alt="img"><br>此时也只有一条数据</p>
 
       
 
@@ -642,7 +642,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -654,7 +678,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+                <a href="javascript:void(0)" class="js-tag color2">django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -662,39 +690,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
               </li>
             
             <div class="clearfix"></div>

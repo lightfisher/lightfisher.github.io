@@ -16,15 +16,15 @@
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
 <meta property="og:description" content="Python多线程 今天无聊就来写写Python多线程，至于多线程和多进程是什么，emmm，自行百度。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C1.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C2.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C3.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C4.jpg">
-<meta property="og:updated_time" content="2018-12-22T15:19:35.422Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywsf0q7kij30k20f1mz7.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywsfhch1oj30l90ehgod.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywsfhja6gj30ph0ejacz.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywsfiaajzj30p10ewgok.jpg">
+<meta property="og:updated_time" content="2019-01-06T07:32:20.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python多线程">
 <meta name="twitter:description" content="Python多线程 今天无聊就来写写Python多线程，至于多线程和多进程是什么，emmm，自行百度。">
-<meta name="twitter:image" content="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C1.jpg">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006bO2RVly1fywsf0q7kij30k20f1mz7.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -241,7 +241,7 @@
 <blockquote>
 <p>我们先是听了音乐，通过for循环了两次，每次<code>time.sleep()</code>了一秒，然后看了会电影，每场电影5秒。我通过<code>print(&quot;all over %ss&quot; % (end-start))</code>来获知我们花了多长时间，截图如下</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C1.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywsf0q7kij30k20f1mz7.jpg" alt="img"></p>
 <h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><blockquote>
 <p>时代在进步，我们的CPU也是越来越快，CPU就开始抱怨，”P点大的事，就要占用我一点时间，其实我可以同时干好多活的”。于是操作系统进入了多任务时代。我们听着音乐，吃着火锅就不再是dream了。</p>
 </blockquote>
@@ -261,7 +261,7 @@
 <blockquote>
 <p>4.在下图中应该可以看到，所用时间几乎为零。这是因为子线程启动后，父线程也继续执行下去，当父线程执行完最后一条语句时，没有等待子线程，直接退出，同时子线程也一同结束。ps:运行出来应该都是0.0，可能我电脑卡了会=。=</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C2.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywsfhch1oj30l90ehgod.jpg" alt="img"></p>
 <blockquote>
 <p>从执行结果来看，子线程<code>（muisc 、movie ）</code>和主线程<code>（print (&quot;all over %s&quot; % (end-start))）</code>都是同一时间启动，但由于主线程执行完结束，所以导致子线程也终止。</p>
 </blockquote>
@@ -270,14 +270,14 @@
 </blockquote>
 <figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import threading</span><br><span class="line"></span><br><span class="line">from time import ctime,<span class="built_in">sleep</span>,time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def music(<span class="function"><span class="keyword">func</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>):</span><br><span class="line"></span><br><span class="line">        print (<span class="string">"I was listening to %s. %s"</span> %(<span class="function"><span class="keyword">func</span>,<span class="title">ctime</span><span class="params">()</span>))</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">sleep</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">def movie(<span class="function"><span class="keyword">func</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>):</span><br><span class="line"></span><br><span class="line">        print (<span class="string">"I was at the %s! %s"</span> %(<span class="function"><span class="keyword">func</span>,<span class="title">ctime</span><span class="params">()</span>))</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">sleep</span>(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">threads = []</span><br><span class="line"></span><br><span class="line">t1 = threading.Thread(target=music,args=(<span class="string">'爱情买卖'</span>,))</span><br><span class="line"></span><br><span class="line">threads.append(t1)</span><br><span class="line"></span><br><span class="line">t2 = threading.Thread(target=movie,args=(<span class="string">'阿凡达'</span>,))</span><br><span class="line"></span><br><span class="line">threads.append(t2)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    start = time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> t <span class="keyword">in</span> threads:</span><br><span class="line"></span><br><span class="line">        t.setDaemon(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">        t.start()</span><br><span class="line"></span><br><span class="line">    t.join()</span><br><span class="line"></span><br><span class="line">    end = time()</span><br><span class="line"></span><br><span class="line">    print (<span class="string">"all over %s"</span> % (end-start))</span><br></pre></td></tr></table></figure>
 <p>成功截图如下</p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C3.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywsfhja6gj30ph0ejacz.jpg" alt="img"></p>
 <blockquote>
 <p>把听歌sleep方法调到4秒，问现在运行完要几秒?</p>
 </blockquote>
 <blockquote>
 <p>答案是10秒左右，因为两个进程同时运行啊。取最多的线程消耗时间就好了。</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/Multithreading%5C4.jpg" alt="img"></p>
+<p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywsfiaajzj30p10ewgok.jpg" alt="img"></p>
 <h2 id="代码整合改进"><a href="#代码整合改进" class="headerlink" title="代码整合改进"></a>代码整合改进</h2><p>好好看，好好学</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">from time import <span class="keyword">sleep</span>, ctime </span><br><span class="line"></span><br><span class="line">import threading</span><br><span class="line"></span><br><span class="line">def super_player(<span class="keyword">file</span>,time):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i in <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line"></span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'Start playing： %s! %s'</span> %(<span class="keyword">file</span>,ctime()))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">sleep</span>(time)</span><br><span class="line"></span><br><span class="line">#播放的文件与播放时长</span><br><span class="line"></span><br><span class="line"><span class="keyword">list</span> = &#123;<span class="string">'爱情买卖.mp3'</span>:<span class="number">3</span>,<span class="string">'阿凡达.mp4'</span>:<span class="number">5</span>,<span class="string">'我和你.mp3'</span>:<span class="number">4</span>&#125;</span><br><span class="line"></span><br><span class="line">threads = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">files</span> = <span class="built_in">range</span>(<span class="built_in">len</span>(<span class="keyword">list</span>))</span><br><span class="line"></span><br><span class="line">#创建线程</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="keyword">file</span>,time in <span class="keyword">list</span>.<span class="built_in">items</span>():</span><br><span class="line"></span><br><span class="line">    t = threading.Thread(target=super_player,<span class="keyword">args</span>=(<span class="keyword">file</span>,time))</span><br><span class="line"></span><br><span class="line">    threads.<span class="keyword">append</span>(t)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>: </span><br><span class="line"></span><br><span class="line">    #启动线程</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i in <span class="keyword">file</span><span class="variable">s:</span></span><br><span class="line"></span><br><span class="line">        threads[i].start() </span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i in <span class="keyword">file</span><span class="variable">s:</span></span><br><span class="line"></span><br><span class="line">        threads[i].<span class="keyword">join</span>()</span><br><span class="line"></span><br><span class="line">    #主线程</span><br><span class="line"></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'end:%s'</span> %ctime())</span><br></pre></td></tr></table></figure>
 <p>以上就是本次博客的全部内容了，基本参考博客 So</p>
@@ -584,7 +584,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -596,7 +620,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+                <a href="javascript:void(0)" class="js-tag color2">django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -604,39 +632,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wordcloud</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
               </li>
             
             <div class="clearfix"></div>
