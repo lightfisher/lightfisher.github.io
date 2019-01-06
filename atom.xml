@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lightfisher.cn/"/>
-  <updated>2019-01-06T12:43:13.514Z</updated>
+  <updated>2019-01-06T13:51:14.578Z</updated>
   <id>http://www.lightfisher.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.lightfisher.cn/2019/01/06/Python%E4%B8%8B%E8%BD%BD%E5%A4%A7%E6%96%87%E4%BB%B6/"/>
     <id>http://www.lightfisher.cn/2019/01/06/Python下载大文件/</id>
     <published>2019-01-06T12:39:00.000Z</published>
-    <updated>2019-01-06T12:43:13.514Z</updated>
+    <updated>2019-01-06T13:51:14.578Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="用Python下载超大文件"><a href="#用Python下载超大文件" class="headerlink" title="用Python下载超大文件"></a>用Python下载超大文件</h1><blockquote><p>在日常的应用中，我们有时候会用Python下载超大文件，这个时候就需要进行调整了。Just show the code。</p></blockquote><a id="more"></a><blockquote><p>代码如下：</p></blockquote><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">r = requests.get(url, stream=True)  <span class="comment"># 记得设置stream = True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="keyword">open</span>(local_filename, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">chunk</span> <span class="keyword">in</span> r.iter_content(chunk_size=<span class="number">1024</span>): <span class="comment"># chunk_size 每次下载1024个字节</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">chunk</span>: <span class="comment"># filter out keep-alive new chunks</span></span><br><span class="line"></span><br><span class="line">            f.write(<span class="keyword">chunk</span>)</span><br><span class="line"></span><br><span class="line">            f.flush() <span class="comment"># 刷新缓冲区</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="用Python下载超大文件"><a href="#用Python下载超大文件" class="headerlink" title="用Python下载超大文件"></a>用Python下载超大文件</h1><blockquote><p>在日常的应用中，我们有时候会用Python下载超大文件，这个时候就需要进行调整了。Just show the code。</p></blockquote><a id="more"></a><blockquote><p>代码如下：</p></blockquote><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">r = requests.get(url, stream=True)  <span class="comment"># 记得设置stream = True</span></span><br><span class="line"><span class="keyword">with</span> <span class="keyword">open</span>(local_filename, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">chunk</span> <span class="keyword">in</span> r.iter_content(chunk_size=<span class="number">1024</span>): <span class="comment"># chunk_size 每次下载1024个字节</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">chunk</span>: <span class="comment"># filter out keep-alive new chunks</span></span><br><span class="line">            f.write(<span class="keyword">chunk</span>)</span><br><span class="line">            f.flush() <span class="comment"># 刷新缓冲区</span></span><br></pre></td></tr></table></figure><p><br><br><br>Just Have Fun…</p>]]></content>
     
     <summary type="html">
     
@@ -206,9 +206,9 @@
       <category term="爬虫" scheme="http://www.lightfisher.cn/categories/%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="Python" scheme="http://www.lightfisher.cn/tags/Python/"/>
-    
       <category term="spider" scheme="http://www.lightfisher.cn/tags/spider/"/>
+    
+      <category term="Python" scheme="http://www.lightfisher.cn/tags/Python/"/>
     
   </entry>
   

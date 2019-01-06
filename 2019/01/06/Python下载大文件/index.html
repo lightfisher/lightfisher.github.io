@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
 <meta property="og:description" content="用Python下载超大文件 在日常的应用中，我们有时候会用Python下载超大文件，这个时候就需要进行调整了。Just show the code。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-06T12:43:13.514Z">
+<meta property="og:updated_time" content="2019-01-06T13:51:14.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python下载大文件">
 <meta name="twitter:description" content="用Python下载超大文件 在日常的应用中，我们有时候会用Python下载超大文件，这个时候就需要进行调整了。Just show the code。">
@@ -200,7 +200,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">100字</span>
+        <span class="post-count">103字</span>
       </span>
     </span>
 
@@ -232,7 +232,9 @@
 <blockquote>
 <p>代码如下：</p>
 </blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">r = requests.get(url, stream=True)  <span class="comment"># 记得设置stream = True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="keyword">open</span>(local_filename, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">chunk</span> <span class="keyword">in</span> r.iter_content(chunk_size=<span class="number">1024</span>): <span class="comment"># chunk_size 每次下载1024个字节</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">chunk</span>: <span class="comment"># filter out keep-alive new chunks</span></span><br><span class="line"></span><br><span class="line">            f.write(<span class="keyword">chunk</span>)</span><br><span class="line"></span><br><span class="line">            f.flush() <span class="comment"># 刷新缓冲区</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">r = requests.get(url, stream=True)  <span class="comment"># 记得设置stream = True</span></span><br><span class="line"><span class="keyword">with</span> <span class="keyword">open</span>(local_filename, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">chunk</span> <span class="keyword">in</span> r.iter_content(chunk_size=<span class="number">1024</span>): <span class="comment"># chunk_size 每次下载1024个字节</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">chunk</span>: <span class="comment"># filter out keep-alive new chunks</span></span><br><span class="line">            f.write(<span class="keyword">chunk</span>)</span><br><span class="line">            f.flush() <span class="comment"># 刷新缓冲区</span></span><br></pre></td></tr></table></figure>
+<p><br><br><br>Just Have Fun…</p>
+
       
 
       
@@ -508,6 +510,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
               </li>
              
@@ -516,11 +522,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Hexo搭建</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">spider</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -533,14 +543,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">spider</a>
               </li>
              
               <li class="article-tag-list-item">
