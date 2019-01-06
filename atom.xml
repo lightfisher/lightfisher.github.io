@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-04T06:20:25.010Z</updated>
+  <updated>2019-01-06T09:52:47.010Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>科学上网</title>
+    <link href="http://yoursite.com/2019/01/06/%E4%B8%8A%E7%BD%91/"/>
+    <id>http://yoursite.com/2019/01/06/上网/</id>
+    <published>2019-01-06T08:45:00.000Z</published>
+    <updated>2019-01-06T09:52:47.010Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Chrome科学上网"><a href="#Chrome科学上网" class="headerlink" title="Chrome科学上网"></a>Chrome科学上网</h1><blockquote><p>最近也是从石油那里学习到科学上网(fan qiang)的方法，所以，特地写一篇博客，记录一下，怕以后忘咯~</p></blockquote><a id="more"></a><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><blockquote><p>当然是下载Chrome浏览器咯，由于操作过于简单，这里就不多加阐述了</p></blockquote><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><blockquote><p>要去Chrome的网上应用商店下载<code>谷歌上网助手</code>,这里就是重难点了。去年没考，今年。。讲偏了。emmm，这里你可以安装一个<code>谷歌访问助手</code>，网上有，但是，这里为了造福全人类我就放上我的资源吧，<a href="https://pan.baidu.com/s/13yLadcRh0CfFLMXy8MELUg" target="_blank" rel="noopener">链接</a>, 提取码: p73b </p></blockquote><blockquote><p>自行下载后，把插件文件拖到Chrome浏览器应该可能就能够安装,<strong>重点来了</strong>,如果不能安装，看下面</p></blockquote><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywz0r2rz7j30wz0ii43o.jpg" alt="img"></p><blockquote><p>如果不能安装，你可以，先讲下载好的插件的后缀名改成<code>rar</code>，成为压缩文件</p></blockquote><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywz0r6h2dj30x90ion2e.jpg" alt="img"></p><blockquote><p>然后对其进行解压</p></blockquote><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywz3ntzg9j30xg0iudl8.jpg" alt="img"></p><blockquote><p>解压完了后，进行进行安装，去拓展程序界面进行安装，用<code>加载已解压的拓展程序</code>进行安装。记得去选中你解压后的文件名，文件名就可以了</p></blockquote><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywz6dg4xvj31hc0rs13r.jpg" alt="img"></p><blockquote><p>安装完成后，他就显示说试用期12个小时，但是你只要修改默认启动浏览器主页就可以永久激活，So，你可以去修改一下，但是，关掉浏览器，重新开一下，在修改回来，它也是永久的。</p></blockquote><h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><blockquote><p>安装完谷歌访问助手插件后，我们就可以进去Chrome的网上应用商店进行安装各种各样的插件(这也是Chrome好的地方)，这里我们要安装<code>谷歌上网助手</code>，PS，因为我是安装好谷歌上网助手的，和谷歌访问助手起冲突，所以停用了访问助手，你们应该启动一下</p></blockquote><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywzevseaij31h50rwtfi.jpg" alt="img"></p><blockquote><p>这里你需要点一下，<code>添加至Chrome</code>应该就可以安装了，安装了，记得启动哦(就是原先的那的<code>拓展程序</code>界面),启动后在你的浏览器右上角应该就有插件图标，点击登录。</p></blockquote><blockquote><p>这个<code>谷歌上网助手</code>是需要邮箱注册登录的，注册会发一条邮件给你的邮箱，你去邮箱点击链接就能完成注册。但是注册登录的账号只能有三天的VIP使用时间。。。<strong>emmm</strong>，如果到这里就结束了。就太垮了。</p></blockquote><blockquote><p>所以，这里就教大家一种方法(这里要感谢下我万能的使用咯)。这里提供一个国外的<a href="https://www.emailondeck.com/" target="_blank" rel="noopener">网站</a> <a href="https://www.emailondeck.com/" target="_blank" rel="noopener">https://www.emailondeck.com/</a> (需要翻墙)，你用前面自己注册的邮箱就能访问,这个网站能免费给你一个邮箱进行注册,这里就简单试验一次</p></blockquote><ul><li>1.点击左侧，验证你是手动操作。输入验证码就好</li></ul><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywzq2ce0gj31h90rpq7d.jpg" alt="img"></p><ul><li>2.验证完了后就可以点击右侧获取邮箱</li></ul><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywzt2ojl2j31ha0ry424.jpg" alt="img"></p><ul><li>3.获取邮箱后就可以去进行注册</li></ul><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fywzvqp5uej31hb0rr767.jpg" alt="img"></p><ul><li>4.注册时，发送的激活链接你需要等一下在上面那个网站界面去接收,然后点击激活</li></ul><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyx05ukqfnj31h70rp0x0.jpg" alt="img"></p><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyx05uojdvj31h60rnwif.jpg" alt="img"></p><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyx06euzxsj31hc06pq3p.jpg" alt="img"></p><p><img src="https://ws1.sinaimg.cn/large/006bO2RVly1fyx09mdk7cj31hc0eywiv.jpg" alt="img"></p><ul><li><p>5.值得注意的是，你可以在你三天快到期的时候去注册，但是你最好记录一下那个注册的网址，否则，你可以layout一下，<a href="http://www.emailondeck.com" target="_blank" rel="noopener">www.emailondeck.com</a> 就访问不了了，这里就友情给下注册地址： chrome-extension://nonmafimegllfoonjgplbabhmgfanaka/login.html?/server/account/signup</p></li><li><p>6.如果不当心忘了，emmm，你可以在手机上VPN一开，然后去注册。</p></li></ul><p><br><br><br>So,这次的博客分享都到这了，Just Have Fun。。。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Chrome科学上网&quot;&gt;&lt;a href=&quot;#Chrome科学上网&quot; class=&quot;headerlink&quot; title=&quot;Chrome科学上网&quot;&gt;&lt;/a&gt;Chrome科学上网&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;最近也是从石油那里学习到科学上网(fan qiang)的方法，所以，特地写一篇博客，记录一下，怕以后忘咯~&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Chrome" scheme="http://yoursite.com/tags/Chrome/"/>
+    
+  </entry>
   
   <entry>
     <title>Python Admin开发</title>
@@ -154,9 +176,9 @@
       <category term="爬虫" scheme="http://yoursite.com/categories/%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
       <category term="spider" scheme="http://yoursite.com/tags/spider/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
   </entry>
   
@@ -482,25 +504,6 @@
       <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
       <category term="Python基础" scheme="http://yoursite.com/tags/Python%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2018/12/04/test/"/>
-    <id>http://yoursite.com/2018/12/04/test/</id>
-    <published>2018-12-04T13:18:00.000Z</published>
-    <updated>2018-12-05T10:37:25.474Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="这是一个简单的测试blog"><a href="#这是一个简单的测试blog" class="headerlink" title="这是一个简单的测试blog"></a>这是一个简单的测试blog</h3><p><a href="https://www.baidu.com" target="_blank" rel="noopener">emm</a><br><br></p><h2 id="Yoona"><a href="#Yoona" class="headerlink" title="Yoona"></a>Yoona</h2><a id="more"></a><p><img src="https://lightfisher.github.io/img/test/10.jpg" alt="Yoona"></p><p><a href="https://postimg.cc/YvcztZCR" target="_blank" rel="noopener"><img src="https://i.postimg.cc/L85C3Mdc/10.jpg" alt="10.jpg"></a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;这是一个简单的测试blog&quot;&gt;&lt;a href=&quot;#这是一个简单的测试blog&quot; class=&quot;headerlink&quot; title=&quot;这是一个简单的测试blog&quot;&gt;&lt;/a&gt;这是一个简单的测试blog&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;emm&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Yoona&quot;&gt;&lt;a href=&quot;#Yoona&quot; class=&quot;headerlink&quot; title=&quot;Yoona&quot;&gt;&lt;/a&gt;Yoona&lt;/h2&gt;
-    
-    </summary>
-    
     
   </entry>
   
