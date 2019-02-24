@@ -206,9 +206,9 @@
       <category term="爬虫" scheme="http://www.lightfisher.cn/categories/%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="Python" scheme="http://www.lightfisher.cn/tags/Python/"/>
-    
       <category term="spider" scheme="http://www.lightfisher.cn/tags/spider/"/>
+    
+      <category term="Python" scheme="http://www.lightfisher.cn/tags/Python/"/>
     
   </entry>
   
