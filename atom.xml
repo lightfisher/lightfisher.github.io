@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.lightfisher.cn/"/>
-  <updated>2019-03-07T13:15:25.408Z</updated>
+  <updated>2019-03-10T06:20:02.670Z</updated>
   <id>http://www.lightfisher.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sublime text3配置nodejs运行环境</title>
+    <link href="http://www.lightfisher.cn/2019/03/10/blime-text3%E9%85%8D%E7%BD%AEnodejs%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/"/>
+    <id>http://www.lightfisher.cn/2019/03/10/blime-text3配置nodejs运行环境/</id>
+    <published>2019-03-10T06:05:21.000Z</published>
+    <updated>2019-03-10T06:20:02.670Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="sublime-text3配置nodejs运行环境"><a href="#sublime-text3配置nodejs运行环境" class="headerlink" title="sublime text3配置nodejs运行环境"></a>sublime text3配置nodejs运行环境</h1><blockquote><p>最近几日也是在学习nodejs，一般我都是在用vi来进行简单的编写。但是编写复杂点到的就会可能因为不当心的代码输入错误而报错，所以我就来尝试一下用Sublime Text3来进行编写。所以这篇博客也是记录下sublime下的nodejs运行环境的配置。</p></blockquote><a id="more"></a><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><blockquote><p>首先当然是安装nodejs咯，由于这个过于简单就略过了~~</p></blockquote><h2 id="下载nodejs插件并安装"><a href="#下载nodejs插件并安装" class="headerlink" title="下载nodejs插件并安装"></a>下载nodejs插件并安装</h2><blockquote><p>1.下载地址： <a href="https://github.com/tanepiper/SublimeText-Nodejs" target="_blank" rel="noopener">https://github.com/tanepiper/SublimeText-Nodejs</a></p></blockquote><p><img src="http://qnpic.top\sublime_nodejs%5C4.jpg" alt="imh"></p><blockquote><p>2.下载下来后改名为nodejs</p></blockquote><p><img src="http://qnpic.top\sublime_nodejs%5C3.jpg" alt="ig"></p><blockquote><p>3.复制到sublime的插件目录下</p></blockquote><p><img src="http://qnpic.top\sublime_nodejs%5C1.jpg" alt="imh"></p><p><img src="http://qnpic.top\sublime_nodejs%5C2.jpg" alt="img"></p><p><img src="http://qnpic.top\sublime_nodejs%5CGIF.gif" alt="img"></p><blockquote><p>4.然后就是在修改其目录下的配置文件，用sublime打开Nodejs.sublime-build 和 Nodejs.sublime-settings 两个文件</p></blockquote><ul><li>1) 修改Nodejs.sublime-build如下图</li></ul><p><img src="http://qnpic.top\sublime_nodejs%5C5.jpg" alt="img"></p><ul><li>2) 更改Nodejs.sublime-settings文件如下图(记得转义)：</li></ul><p><img src="http://qnpic.top\sublime_nodejs%5C7.jpg" alt="img"></p><blockquote><p>5.nodejs的配置到这里就基本结束了，你就可以选择nodejs的运行环境进行运行nodejs文件，这里我就来简单演示一个demo</p></blockquote><p><img src="http://qnpic.top\sublime_nodejs%5C8.jpg" alt="img"></p><p><img src="http://qnpic.top\sublime_nodejs%5C6.jpg" alt="img"></p><p><br><br><br>So,Just have fun…</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;sublime-text3配置nodejs运行环境&quot;&gt;&lt;a href=&quot;#sublime-text3配置nodejs运行环境&quot; class=&quot;headerlink&quot; title=&quot;sublime text3配置nodejs运行环境&quot;&gt;&lt;/a&gt;sublime text3配置nodejs运行环境&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;最近几日也是在学习nodejs，一般我都是在用vi来进行简单的编写。但是编写复杂点到的就会可能因为不当心的代码输入错误而报错，所以我就来尝试一下用Sublime Text3来进行编写。所以这篇博客也是记录下sublime下的nodejs运行环境的配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>KOD 开源免费的私人网盘创建</title>
@@ -677,9 +697,9 @@
       <category term="爬虫" scheme="http://www.lightfisher.cn/categories/%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="spider" scheme="http://www.lightfisher.cn/tags/spider/"/>
-    
       <category term="Python" scheme="http://www.lightfisher.cn/tags/Python/"/>
+    
+      <category term="spider" scheme="http://www.lightfisher.cn/tags/spider/"/>
     
   </entry>
   
