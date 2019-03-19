@@ -6,24 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.lightfisher.cn">
-  <title>Python入门问题二 | Lightfish&#39;s Blog</title>
+  <title>nodejs + express + Mysql服务端简单开发 | Lightfish&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python入门问题二1.简述Django的ORM ORM，全拼Object-Relation Mapping，意为对象-关系映射实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite…，如果数">
-<meta name="keywords" content="Python,Python基础">
+  <meta name="description" content="nodejs + express + Mysql服务端简单开发 这个也是我学习nodejs几天来的第一个项目，所以也是简单记录一下。用的是Express应用生成器工具express-generator快速生成一个应用的骨架。模板引擎用的是ejs,关于该模板引擎的介绍可以看这篇博客——Nodejs模板引擎ejs.">
+<meta name="keywords" content="Nodejs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python入门问题二">
-<meta property="og:url" content="http://www.lightfisher.cn/2018/12/06/Python入门问题二/index.html">
+<meta property="og:title" content="nodejs + express + Mysql服务端简单开发">
+<meta property="og:url" content="http://www.lightfisher.cn/2019/03/17/nodejs-express-Mysql服务端简单开发/index.html">
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
-<meta property="og:description" content="Python入门问题二1.简述Django的ORM ORM，全拼Object-Relation Mapping，意为对象-关系映射实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite…，如果数">
+<meta property="og:description" content="nodejs + express + Mysql服务端简单开发 这个也是我学习nodejs几天来的第一个项目，所以也是简单记录一下。用的是Express应用生成器工具express-generator快速生成一个应用的骨架。模板引擎用的是ejs,关于该模板引擎的介绍可以看这篇博客——Nodejs模板引擎ejs.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://qnpic.top\Python_question%5C26.jpg">
-<meta property="og:image" content="http://qnpic.top\Python_question%5C27.jpg">
-<meta property="og:image" content="http://qnpic.top\Python_question%5C28.jpg">
-<meta property="og:updated_time" content="2019-03-19T02:13:16.686Z">
+<meta property="og:image" content="http://qnpic.top/express_mysql%5C1.jpg">
+<meta property="og:image" content="http://qnpic.top/express_mysql%5C2.jpg">
+<meta property="og:image" content="http://qnpic.top/express_mysql%5C3.jpg">
+<meta property="og:image" content="http://qnpic.top/express_mysql%5CGIF.gif">
+<meta property="og:updated_time" content="2019-03-19T01:55:26.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python入门问题二">
-<meta name="twitter:description" content="Python入门问题二1.简述Django的ORM ORM，全拼Object-Relation Mapping，意为对象-关系映射实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite…，如果数">
-<meta name="twitter:image" content="http://qnpic.top\Python_question%5C26.jpg">
+<meta name="twitter:title" content="nodejs + express + Mysql服务端简单开发">
+<meta name="twitter:description" content="nodejs + express + Mysql服务端简单开发 这个也是我学习nodejs几天来的第一个项目，所以也是简单记录一下。用的是Express应用生成器工具express-generator快速生成一个应用的骨架。模板引擎用的是ejs,关于该模板引擎的介绍可以看这篇博客——Nodejs模板引擎ejs.">
+<meta name="twitter:image" content="http://qnpic.top/express_mysql%5C1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -186,14 +187,14 @@
           <div id="js-content" class="content-ll">
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<article id="post-Python入门问题二" class="article article-type-post " itemscope="" itemprop="blogPost">
+<article id="post-nodejs-express-Mysql服务端简单开发" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python入门问题二
+      nodejs + express + Mysql服务端简单开发
     </h1>
   
 
@@ -204,7 +205,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">618字</span>
+        <span class="post-count">1.4k字</span>
       </span>
     </span>
 
@@ -213,7 +214,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
@@ -221,50 +222,88 @@
         <!-- 设置浏览 -->
         <br><span style="color: rgb(196, 197, 253); font-size: 14px;">文章总共浏览了: <span id="busuanzi_value_page_pv"></span>次</span>
         
-        <a href="/2018/12/06/Python入门问题二/" class="archive-article-date">
-  	<time datetime="2018-12-05T16:25:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
+        <a href="/2019/03/17/nodejs-express-Mysql服务端简单开发/" class="archive-article-date">
+  	<time datetime="2019-03-17T09:31:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Python入门问题二"><a href="#Python入门问题二" class="headerlink" title="Python入门问题二"></a>Python入门问题二</h1><h3 id="1-简述Django的ORM"><a href="#1-简述Django的ORM" class="headerlink" title="1.简述Django的ORM"></a>1.简述Django的ORM</h3><blockquote>
-<p>ORM，全拼Object-Relation Mapping，意为对象-关系映射实现了数据模型与数据库的解耦，通过简单的配置就可以轻松跟换数据库，而不需要修改代码只需要面向对象编程，ORM操作本质上会根据对接的数据库引擎，翻译成相对应的sql语句，所有使用Django开发的项目无需关系程序底层使用的是MySql、Oracle、sqlite…，如果数据库迁移，只需要更换Django的数据库引擎就好了</p>
+        <h1 id="nodejs-express-Mysql服务端简单开发"><a href="#nodejs-express-Mysql服务端简单开发" class="headerlink" title="nodejs + express + Mysql服务端简单开发"></a>nodejs + express + Mysql服务端简单开发</h1><blockquote>
+<p>这个也是我学习nodejs几天来的第一个项目，所以也是简单记录一下。用的是Express应用生成器工具<code>express-generator</code>快速生成一个应用的骨架。模板引擎用的是<code>ejs</code>,关于该模板引擎的介绍可以看这篇博客——<a href="/2019/03/15/Nodejs模板引擎ejs/">Nodejs模板引擎ejs</a>.</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="2-一行代码展开二维列表"><a href="#2-一行代码展开二维列表" class="headerlink" title="2.一行代码展开二维列表"></a>2.一行代码展开二维列表</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"><span class="selector-tag">a</span> = [[np<span class="selector-class">.random</span><span class="selector-class">.randint</span>(<span class="number">1</span>,<span class="number">10</span>),np<span class="selector-class">.random</span><span class="selector-class">.randint</span>(<span class="number">1</span>,<span class="number">10</span>)] <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">3</span>)]</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(a)</span></span></span><br><span class="line">x = [j <span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> <span class="selector-tag">a</span> <span class="keyword">for</span> j <span class="keyword">in</span> i]</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(x)</span></span></span><br></pre></td></tr></table></figure>
-<p><img src="http://qnpic.top\Python_question%5C26.jpg" alt="img"></p>
-<ul>
-<li>将列表装换成numpy矩阵，通过numpy的flatten()方法<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import numpy as <span class="built_in">np</span></span><br><span class="line">a = [[<span class="built_in">np</span>.<span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">10</span>),<span class="built_in">np</span>.<span class="built_in">random</span>.randint(<span class="number">1</span>,<span class="number">10</span>)] <span class="keyword">for</span> <span class="symbol">_</span> <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">np</span>.<span class="built_in">array</span>(a).<span class="built_in">flatten</span>().tolist())</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://qnpic.top\Python_question%5C27.jpg" alt="img"></p>
-<h3 id="3-举例说明异常模块中try，except，else，finally的相关意义"><a href="#3-举例说明异常模块中try，except，else，finally的相关意义" class="headerlink" title="3.举例说明异常模块中try，except，else，finally的相关意义"></a>3.举例说明异常模块中try，except，else，finally的相关意义</h3><ul>
-<li>try…except…else 没有获取异常，执行else语句</li>
-<li>try…except…finally 不管有没有获取异常都会执行finally语句</li>
-</ul>
-<h3 id="4-举例说明zip函数的用法"><a href="#4-举例说明zip函数的用法" class="headerlink" title="4.举例说明zip函数的用法"></a>4.举例说明zip函数的用法</h3><ul>
-<li>zip()函数在运算的时候，会以一个或多个序列(可迭代对象)作为参数，返回一个元组的列表。同时将这些序列中并排的元素配对</li>
-<li>zip()参数可以接受任何类型的序列，同时还可以有两个以上的参数；当传入参数不等时，zip能够自动以最短序列长度为准进行截取，并获得元组</li>
-</ul>
-<p><img src="http://qnpic.top\Python_question%5C28.jpg" alt="zip"></p>
-<h3 id="5-列出常见的状态吗和意义"><a href="#5-列出常见的状态吗和意义" class="headerlink" title="5.列出常见的状态吗和意义"></a>5.列出常见的状态吗和意义</h3><ul>
-<li><code>200</code> <code>OK</code> 请求正常处理完毕</li>
-<li><code>204</code> <code>No Content</code> 请求成功处理，没有实体的主体返回</li>
-<li><code>206</code> <code>Partial Content</code> GET范围请求已成功处理</li>
-<li><code>301</code> <code>Moved Permanently</code> 永久重定向，资源已永久分配新URL</li>
-<li><code>302</code> <code>Found</code> 临时重定向，资源已临时分配新URL</li>
-<li><code>303</code> <code>See Other</code> 临时重定向，期望使用GET定向获取</li>
-<li><code>304</code> <code>Not Modified</code> 发送的附带条件不足请求为满足</li>
-<li><code>307</code> <code>Temporary Redirect</code> 临时重定向，POST不会变成GET</li>
-<li><code>400</code> <code>Bad Request</code> 请求报文错误或参数不足</li>
-<li><code>401</code> <code>Unauthorized</code> 需要通过HTTP认证，或认证失败</li>
-<li><code>403</code> <code>Forbidden</code> 请求资源被拒绝</li>
-<li><code>404</code> <code>Not Found</code> 无法找到请求资源(服务器无法拒绝)</li>
-<li><code>500</code> <code>Internal Server Error</code> 服务器故障或Web应用故障</li>
-<li><code>503</code> <code>Service Unavailable</code> 服务器超负载或停机维修</li>
-</ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
+<p>首先是需要安装 NodeJS 环境，这里就不再做介绍</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>安装 Express</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install express -g <span class="comment">//全局安装</span></span><br><span class="line">npm install express-generator -g <span class="comment">//全局安装</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2.初始化项,运行完下面这个命令行后就会生成一个名为student的文件夹，里面的目录结构如下图</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">express -e student <span class="comment">//-e 这里用ejs引擎模板</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://qnpic.top/express_mysql%5C1.jpg" alt="img"></p>
+<blockquote>
+<p>3.执行如下命令行</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd student <span class="comment">//进入项目文件夹</span></span><br><span class="line">npm install <span class="comment">//安装项目依赖</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>4.最终目录</p>
+</blockquote>
+<p><img src="http://qnpic.top/express_mysql%5C2.jpg" alt="img"></p>
+<blockquote>
+<p>5.安装mysql模块</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mysql --save</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>6.整个项目用的是ejs模块，所以要安装</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install ejs</span><br></pre></td></tr></table></figure>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/bin</span> : 用来启动应用服务器</span><br><span class="line"><span class="string">/public</span>: 存放静态资源目录</span><br><span class="line"><span class="string">/routes</span>：路由用于确定应用程序如何响应对特定端点的客户机请求，包含一个 URI（或路径）和一个特定的 HTTP 请求方法（GET、POST 等）。每个路由可以具有一个或多个处理程序函数，这些函数在路由匹配时执行。</span><br><span class="line"><span class="string">/views</span>: 模板文件所在目录</span><br><span class="line"><span class="string">/app.js</span> 这个是服务器启动的入口</span><br></pre></td></tr></table></figure>
+<h2 id="具体基本步骤"><a href="#具体基本步骤" class="headerlink" title="具体基本步骤"></a>具体基本步骤</h2><blockquote>
+<p>由于篇幅的有限这里就简单只介绍其中的一个功能，主要也是大致能够懂得该项目的基本实现过程。所以我这个介绍的是添加信息和首页的实现。</p>
+</blockquote>
+<h4 id="首页的实现"><a href="#首页的实现" class="headerlink" title="首页的实现"></a>首页的实现</h4><blockquote>
+<p>1.数据库连接，在项目目录下创建了config目录，并在里面创建了db.js,里面是是nodejs连接mysql的配置</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mysql = <span class="built_in">require</span>(<span class="string">'mysql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> DB = &#123;</span><br><span class="line">	host: <span class="string">'localhost'</span>,</span><br><span class="line">	port: <span class="number">3306</span>,</span><br><span class="line">	user: <span class="string">'root'</span>,</span><br><span class="line">	password: <span class="string">'111111'</span>,</span><br><span class="line">	database: <span class="string">'student'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> DBConnection = mysql.createConnection(DB);</span><br><span class="line"></span><br><span class="line">DBConnection.connect(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(err)&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'error connected: '</span>+err.stack);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'connected successful as id '</span>+DBConnection.threadId);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports.DBConnection = DBConnection;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2.根据app.js的路由配置</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> indexRouter = <span class="built_in">require</span>(<span class="string">'./routes/index'</span>);</span><br><span class="line"><span class="keyword">var</span> usersRouter = <span class="built_in">require</span>(<span class="string">'./routes/users'</span>);</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/'</span>, indexRouter);</span><br><span class="line">app.use(<span class="string">'/user'</span>, usersRouter);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="3">
+<li>‘/‘ 分配给了’./routes/index’ ,下面是index.js里的代码</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="keyword">var</span> db = <span class="built_in">require</span>(<span class="string">'./../config/db.js'</span>); <span class="comment">//这里我实在项目下创建了config目录，并在里面创建了db.js,里面是是nodejs连接mysql的配置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> DBConnection = db.DBConnection;</span><br><span class="line"><span class="keyword">var</span> sql = <span class="string">'SELECT * FROM STUDENT'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* GET home page. */</span></span><br><span class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  DBConnection.query(sql,<span class="function"><span class="keyword">function</span>(<span class="params">err,rows</span>)</span>&#123;</span><br><span class="line">  	<span class="keyword">if</span>(err)&#123;</span><br><span class="line">  		res.render(<span class="string">'index'</span>, &#123; <span class="attr">title</span>: <span class="string">'学生成绩录入系统'</span>, <span class="attr">data</span>:[] &#125;);</span><br><span class="line">  	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  		res.render(<span class="string">'index'</span>, &#123; <span class="attr">title</span>: <span class="string">'学生成绩录入系统'</span>, <span class="attr">data</span>:rows &#125;);</span><br><span class="line">  	&#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>4.res.render(‘index’),这里的话和Django的模板使用是一样的，index是模板文件，后面的传递的数据。下面是’index.ejs’的html代码</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">title</span> %&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">'stylesheet'</span> <span class="attr">href</span>=<span class="string">'/stylesheets/style.css'</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">title</span> %&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Welcome to <span class="tag">&lt;<span class="name">%=</span> <span class="attr">title</span> %&gt;</span>   <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/user/add"</span>&gt;</span>添加学生信息<span class="tag">&lt;/<span class="name">a</span>&gt;</span>  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/user/search"</span>&gt;</span>查询学生信息<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"std"</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="name">th</span>&gt;</span>编号<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="name">th</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="name">th</span>&gt;</span>语文<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="name">th</span>&gt;</span>英语<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="name">th</span>&gt;</span>数学<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;<span class="name">th</span>&gt;</span>操作<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    	&lt;% for(var i = 0; i&lt;data.length;i++)&#123; %&gt;</span><br><span class="line">    		<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=data[i].id%</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=data[i].name%</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=data[i].chinese%</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=data[i].math%</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=data[i].english%</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">    				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/user/del/&lt;%=data[i].id%&gt;"</span>&gt;</span>删除<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    				<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/user/toupdate/&lt;%=data[i].id%&gt;"</span>&gt;</span>修改<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    			<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">%&#125;%</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>5.这样的话就完成了首页的实现，截图如下</p>
+</blockquote>
+<p><img src="http://qnpic.top/express_mysql%5C3.jpg" alt="img"></p>
+<h4 id="添加信息的实现"><a href="#添加信息的实现" class="headerlink" title="添加信息的实现"></a>添加信息的实现</h4><blockquote>
+<p>1.添加信息的实现也是在app.js中将 ‘/user’  分配给了users.js路由配置文件，由于里面的代码太多，这里有只展示实现信息添加的一部分</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="keyword">var</span> db = <span class="built_in">require</span>(<span class="string">'./../config/db'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> DBConnection = db.DBConnection;</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/add'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</span><br><span class="line">	res.render(<span class="string">'add'</span>,&#123;<span class="attr">title</span>:<span class="string">"学生信息添加"</span>&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/add'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> name = req.body.name;</span><br><span class="line">	<span class="keyword">var</span> chinese = req.body.chinese;</span><br><span class="line">	<span class="keyword">var</span> math = req.body.math;</span><br><span class="line">	<span class="keyword">var</span> english = req.body.english;</span><br><span class="line">	<span class="keyword">var</span> sql = <span class="string">"INSERT INTO STUDENT(name,chinese,math,english) values('"</span>+name+<span class="string">"','"</span>+chinese+<span class="string">"','"</span>+math+<span class="string">"','"</span>+english+<span class="string">"')"</span>;</span><br><span class="line">	DBConnection.query(sql,<span class="function"><span class="keyword">function</span>(<span class="params">err,rows</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(err)&#123;</span><br><span class="line">			res.send(<span class="string">'添加学生信息失败...'</span>);</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			res.redirect(<span class="string">'/'</span>); <span class="comment">//重定向</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2.’add.ejs’  模板代码</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;<span class="name">%=title%</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">%=title%</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/user/add"</span> <span class="attr">method</span>=<span class="string">'post'</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"name"</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"chinese"</span>&gt;</span>语文<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"chinese"</span> <span class="attr">id</span>=<span class="string">"chinese"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"math"</span>&gt;</span>数学<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tex"</span> <span class="attr">name</span>=<span class="string">"math"</span> <span class="attr">id</span>=<span class="string">"math"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"english"</span>&gt;</span>英语<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"english"</span> <span class="attr">id</span>=<span class="string">"english"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3.实现如下</p>
+</blockquote>
+<p><img src="http://qnpic.top/express_mysql%5CGIF.gif" alt="img"></p>
+<p><br><br><br></p>
+<p>这次的博客也是介绍了mysql和express-generator项目生成器的简单使用So,<br><br>Just havefun</p>
 
       
 
@@ -304,11 +343,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Python基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Nodejs</a>
         		</li>
       		
 		</ul>
@@ -320,7 +355,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        			<a href="/categories/Nodejs//" class="article-tag-list-link color2">Nodejs</a>
         		</li>
       		
 		</ul>
@@ -375,7 +410,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.lightfisher.cn/2018/12/06/Python入门问题二/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.lightfisher.cn/2019/03/17/nodejs-express-Mysql服务端简单开发/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -389,18 +424,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/06/ongoDB数据库/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MongoDB数据库
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/05/Hexo-github搭建个人博客二/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo+github搭建个人博客二</div>
+    <a href="/2019/03/15/Nodejs模板引擎ejs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Nodejs模板引擎ejs</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -427,7 +453,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python入门问题二"><span class="toc-number">1.</span> <span class="toc-text">Python入门问题二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-简述Django的ORM"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.简述Django的ORM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-一行代码展开二维列表"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.一行代码展开二维列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-举例说明异常模块中try，except，else，finally的相关意义"><span class="toc-number">1.0.3.</span> <span class="toc-text">3.举例说明异常模块中try，except，else，finally的相关意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-举例说明zip函数的用法"><span class="toc-number">1.0.4.</span> <span class="toc-text">4.举例说明zip函数的用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-列出常见的状态吗和意义"><span class="toc-number">1.0.5.</span> <span class="toc-text">5.列出常见的状态吗和意义</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#nodejs-express-Mysql服务端简单开发"><span class="toc-number">1.</span> <span class="toc-text">nodejs + express + Mysql服务端简单开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本介绍"><span class="toc-number">1.2.</span> <span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#具体基本步骤"><span class="toc-number">1.3.</span> <span class="toc-text">具体基本步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#首页的实现"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">首页的实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加信息的实现"><span class="toc-number">1.3.0.2.</span> <span class="toc-text">添加信息的实现</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>

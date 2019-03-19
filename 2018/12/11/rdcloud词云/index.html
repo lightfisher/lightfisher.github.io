@@ -16,17 +16,17 @@
 <meta property="og:site_name" content="Lightfish&#39;s Blog">
 <meta property="og:description" content="WordCloud中英文词云绘制 摘要：当我们手上有一篇文档，比如小说、书籍、电影剧本，若想快速了解其主要内容，你这个时候就可以用到WordCloud词云图，显示主要的关键词(配合jieba.analyse更佳)。本博客将介绍常见的词云图绘制，以及Frequency频词云图。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/1.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/2.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/3.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/4.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/5.jpg">
-<meta property="og:image" content="http://pjas65wzi.bkt.clouddn.com/yoona.jpg">
-<meta property="og:updated_time" content="2018-12-11T14:06:04.623Z">
+<meta property="og:image" content="http://qnpic.top/1.jpg">
+<meta property="og:image" content="http://qnpic.top/2.jpg">
+<meta property="og:image" content="http://qnpic.top/3.jpg">
+<meta property="og:image" content="http://qnpic.top/4.jpg">
+<meta property="og:image" content="http://qnpic.top/5.jpg">
+<meta property="og:image" content="http://qnpic.top/yoona.jpg">
+<meta property="og:updated_time" content="2019-03-19T02:15:20.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="wordcloud词云">
 <meta name="twitter:description" content="WordCloud中英文词云绘制 摘要：当我们手上有一篇文档，比如小说、书籍、电影剧本，若想快速了解其主要内容，你这个时候就可以用到WordCloud词云图，显示主要的关键词(配合jieba.analyse更佳)。本博客将介绍常见的词云图绘制，以及Frequency频词云图。">
-<meta name="twitter:image" content="http://pjas65wzi.bkt.clouddn.com/1.jpg">
+<meta name="twitter:image" content="http://qnpic.top/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Lightfish&#39;s Blog" type="application/atom+xml">
   
@@ -239,7 +239,7 @@
 <h5 id="首先，我们得准备好我们的文本文件"><a href="#首先，我们得准备好我们的文本文件" class="headerlink" title="首先，我们得准备好我们的文本文件"></a>首先，我们得准备好我们的文本文件</h5><blockquote>
 <p>这里我就用我服务器上的<a href="http://39.108.219.55:8080/bkcontent?url=https://www.qu.la/book/746/10632452.html" target="_blank" rel="noopener">链接</a>文本,然后爬下来，当做测试文本。</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/1.jpg" alt="截图"></p>
+<p><img src="http://qnpic.top/1.jpg" alt="截图"></p>
 <ul>
 <li>以下代码实现获取文本<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">content = requests.get(<span class="string">'http://39.108.219.55:8080/bkcontent?url=https://www.qu.la/book/746/10632452.html'</span>).text</span><br></pre></td></tr></table></figure>
 </li>
@@ -247,13 +247,13 @@
 <blockquote>
 <p>获取文本后就是对着文本进行分析，这里我介绍是jieba模块的一个函数，<code>jieba.analyse.extract_tags()</code>,其中第一个参数是传进去的文本，<code>topK</code>是获取词频的最大词数，<code>allowPOS</code>是获取词频的词语类型，详情可查看这片<a href="https://blog.csdn.net/HHTNAN/article/details/77650128" target="_blank" rel="noopener">博客</a>,<code>withWeight</code>是 是否展示权重，返回的是频词和权重的元组列表。</p>
 </blockquote>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/2.jpg" alt="img"></p>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/3.jpg" alt="img"></p>
+<p><img src="http://qnpic.top/2.jpg" alt="img"></p>
+<p><img src="http://qnpic.top/3.jpg" alt="img"></p>
 <blockquote>
 <p>利用的是<code>generate_from_text()</code>方法生成词云，传入的参数是以<code>空格</code>为间隔,所以基本代码实现如下：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> jieba.analyse</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> wordcloud <span class="keyword">import</span> WordCloud</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">content = requests.get(<span class="string">'http://39.108.219.55:8080/bkcontent?url=https://www.qu.la/book/746/10632452.html'</span>).text</span><br><span class="line">tags = jieba.analyse.extract_tags(</span><br><span class="line">    content, topK=<span class="number">100</span>, allowPOS=(</span><br><span class="line">        <span class="string">'ns'</span>, <span class="string">'n'</span>, <span class="string">'vn'</span>, <span class="string">'v'</span>, <span class="string">'nr'</span>))</span><br><span class="line">contents = <span class="string">' '</span>.join(tags)</span><br><span class="line">print(contents)</span><br><span class="line">wc = WordCloud(</span><br><span class="line">    background_color=<span class="string">'white'</span>,</span><br><span class="line">    font_path=<span class="string">r'C:\Windows\font\kaiu.ttf'</span>,</span><br><span class="line">    width=<span class="number">800</span>,</span><br><span class="line">    height=<span class="number">400</span>,</span><br><span class="line">    margin=<span class="number">2</span>,</span><br><span class="line">    max_words=<span class="number">100</span>,</span><br><span class="line">    min_font_size=<span class="number">15</span>,</span><br><span class="line">    random_state=<span class="number">100</span>,</span><br><span class="line">    mode=<span class="string">'RGB'</span>,</span><br><span class="line">    repeat=<span class="keyword">False</span></span><br><span class="line">)</span><br><span class="line">wc.generate_from_text(contents)</span><br><span class="line">plt.imshow(wc)</span><br><span class="line">plt.axis(<span class="string">'off'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="http://pjas65wzi.bkt.clouddn.com/4.jpg" alt="img"></p>
+<p><img src="http://qnpic.top/4.jpg" alt="img"></p>
 <blockquote>
 <p>通过上面的词云图，你可能会有几个问题：</p>
 <ul>
@@ -333,12 +333,12 @@
 </table>
 <p>关于更详细的用法，您可以去官网了解</p>
 <h3 id="图片背景的词云实现-白底"><a href="#图片背景的词云实现-白底" class="headerlink" title="图片背景的词云实现(白底)"></a>图片背景的词云实现(白底)</h3><ul>
-<li><p>图片展示<br><img src="http://pjas65wzi.bkt.clouddn.com/5.jpg" width="300"></p>
+<li><p>图片展示<br><img src="http://qnpic.top/5.jpg" width="300"></p>
 </li>
 <li><p>代码实现</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> jieba.analyse</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> wordcloud <span class="keyword">import</span> WordCloud,STOPWORDS,ImageColorGenerator</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">content = requests.get(<span class="string">'http://39.108.219.55:8080/bkcontent?url=https://www.qu.la/book/746/10632452.html'</span>).text</span><br><span class="line">tags = jieba.analyse.extract_tags(</span><br><span class="line">    content, topK=<span class="number">40</span>, allowPOS=(</span><br><span class="line">        <span class="string">'ns'</span>, <span class="string">'n'</span>, <span class="string">'vn'</span>, <span class="string">'v'</span>, <span class="string">'nr'</span>))</span><br><span class="line">contents = <span class="string">' '</span>.join(tags)</span><br><span class="line"><span class="comment">#读取图片</span></span><br><span class="line">background_image = np.array(Image.open(<span class="string">'5.JPG'</span>))</span><br><span class="line"><span class="comment">#提取背景图片的颜色</span></span><br><span class="line">img_color = ImageColorGenerator(background_image)</span><br><span class="line"><span class="comment">#设置停止词</span></span><br><span class="line">stopword = set(STOPWORDS)</span><br><span class="line">wc = WordCloud(</span><br><span class="line">    mask=background_image,</span><br><span class="line">    font_path=<span class="string">r'C:\Windows\font\kaiu.ttf'</span>,</span><br><span class="line">    background_color=<span class="string">'white'</span>,</span><br><span class="line">    width=<span class="number">800</span>,</span><br><span class="line">    height=<span class="number">400</span>,</span><br><span class="line">    margin=<span class="number">2</span>,</span><br><span class="line">    max_words=<span class="number">100</span>,</span><br><span class="line">    min_font_size=<span class="number">15</span>,</span><br><span class="line">    random_state=<span class="number">100</span>,</span><br><span class="line">    repeat=<span class="keyword">False</span></span><br><span class="line">)</span><br><span class="line">wc.generate_from_text(contents) <span class="comment"># 等价于wc.gernerate(contents)</span></span><br><span class="line"><span class="comment"># #根据图片色设置背景色</span></span><br><span class="line"><span class="comment"># wc.recolor(color_func=img_color)</span></span><br><span class="line">wc.to_file(<span class="string">'yoona.jpg'</span>)</span><br><span class="line"><span class="comment">#显示图片</span></span><br><span class="line">plt.imshow(wc)</span><br><span class="line">plt.axis(<span class="string">'off'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>截图 ,emm基本实现，可能是图片的质量不行<br><img src="http://pjas65wzi.bkt.clouddn.com/yoona.jpg" width="300"><br><br><br><br>Just have fun…</p>
+<li><p>截图 ,emm基本实现，可能是图片的质量不行<br><img src="http://qnpic.top/yoona.jpg" width="300"><br><br><br><br>Just have fun…</p>
 </li>
 </ul>
 
@@ -675,6 +675,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo搭建</a>
               </li>
              
@@ -699,7 +703,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git操作</a>
+                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -715,7 +719,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Chrome</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -724,14 +736,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">termux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">twilio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Chrome</a>
               </li>
             
             <div class="clearfix"></div>
